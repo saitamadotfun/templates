@@ -1,0 +1,39 @@
+{
+  "name": "waitlist",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx sync && next dev",
+    "build": "bun sync && next build",
+    "start": "bun sync && next start",
+    "lint": "next lint",
+    "sync": "bun x @saitamafun/cli sync --id=NEXT_SAITAMA_SITE_ID --key=NEXT_SAITAMA_API_KEY --url=NEXT_SAITAMA_BASE_API_URL"
+  },
+  "dependencies": {
+    "@iconify-json/fa-brands": "^1.2.0",
+    "@next/polyfill-module": "^15.0.3",
+    "@unocss/reset": "^0.64.0",
+    "clsx": "^2.1.1",
+    "firebase": "^11.0.2",
+    "fs": "^0.0.1-security",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@unocss/postcss": "^0.64.0",
+    "@unocss/webpack": "^0.64.0",
+    "add": "^2.0.6",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.2",
+    "postcss": "^8.4.47",
+    "typescript": "^5",
+    "unocss": "^0.64.0"
+  }
+}

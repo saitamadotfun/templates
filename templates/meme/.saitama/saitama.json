@@ -1,0 +1,91 @@
+{
+  "HomePage": {
+    "Header": {
+      "logo": "MemeSol",
+      "socials": [
+        {
+          "icon": "i-fa-brands:twitter",
+          "name": "Twitter",
+          "link": "https://x.com/theMemeSol"
+        },
+        {
+          "icon": "i-fa-brands:telegram",
+          "name": "Telegram",
+          "link": "https://t.me/MemeSolTalk"
+        }
+      ]
+    },
+    "HeroSection": {
+      "background": {
+        "uri": "/il_banner.png",
+        "metadata": {
+          "alt": "Meme Illustration"
+        }
+      },
+      "title": "The People's <br /> meme gateway",
+      "subtitle": "Meme on demand, for the solana community",
+      "primaryAction": {
+        "title": "Create Meme",
+        "link": "https://t.me/TheMemeSolBot"
+      },
+      "secondaryAction": {
+        "title": "Join Community",
+        "link": "https://t.me/MemeSolTalk"
+      }
+    },
+    "HelpSection": {
+      "helps": [
+        {
+          "title": "Connect on telegram",
+          "description": "Start by chatting with our MemeSol bot on Telegram. It's fast, free, and friendly."
+        },
+        {
+          "title": "Choose or upload your image",
+          "description": "Select from our library of templates or upload your own image."
+        },
+        {
+          "title": "Add Text and Customize",
+          "description": "Make it your own by adding text, choosing fonts, and applying effects."
+        },
+        {
+          "title": "Share or download",
+          "description": "Get your meme instantly and ready to share with the world."
+        }
+      ]
+    },
+    "AboutSection": {
+      "name": "MemeSol",
+      "tokenomics": [
+        "💵 Total Supply 1Billion",
+        "💰 0% Buy/Sell tax",
+        "🔥 100% of MemeSol Liquidity Burned"
+      ],
+      "illustration": {
+        "uri": "https://ik.imagekit.io/orgk45qhh/il_launch_base.png",
+        "metadata": {
+          "alt": "MemeSol Launch Base"
+        }
+      }
+    },
+    "Footer": {
+      "name": "MemeSol",
+      "action": {
+        "title": "Join our telegram",
+        "icon": "i-fa-brands:telegram",
+        "link": "https://t.me/MemeSolTalk"
+      }
+    },
+    "Config": {
+      "theme": {
+        "primary": {
+          "default": "#FFFFFF",
+          "alpha": "rgba(255,255,255,0.1)"
+        },
+        "inverse": {
+          "default": "#000000",
+          "alpha": "#FFFFFF"
+        }
+      }
+    }
+  }
+}

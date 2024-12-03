@@ -1,0 +1,22 @@
+{
+  "name": "templates",
+  "private": "true",
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "clean": "rimraf -rf node_modules .turbo dist out */*/.turbo */packages/dist */*/.next */*/node_modules */bun.lockb */*/bun.lockb"
+  },
+  "dependencies": {
+    "object-to-css-variables": "^0.2.1",
+    "react-toastify": "^10.0.6",
+    "saitamadotfun": "^0.0.0-ui-fix"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "latest"
+  },
+  "workspaces": [
+    "templates/**"
+  ]
+}

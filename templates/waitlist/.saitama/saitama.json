@@ -1,0 +1,57 @@
+{
+  "HomePage": {
+    "Header": {
+      "logo": {
+        "uri": "/favicon.ico",
+        "metadata": {
+          "alt": "Saitama"
+        }
+      },
+      "socials": [
+        {
+          "icon": "i-fa-brands:twitter",
+          "name": "Twitter",
+          "link": ""
+        },
+        {
+          "icon": "i-fa-brands:instagram",
+          "name": "Instagram",
+          "link": ""
+        },
+        {
+          "icon": "i-fa-brands:tiktok",
+          "name": "Tiktok",
+          "link": ""
+        }
+      ]
+    },
+    "HeroSection": {
+      "badge": "Sign up now and get 50% off at launch",
+      "headline": "Software that <br class='md:hidden' /> sparks <br class='lt-md:hidden' /> your <br class='md:hidden' /> imagination",
+      "subtitle": "Unleash your creativity with our innovative <br class='md:hidden' /> software. From concept <br class='lt-md:hidden' /> to creation, we provide <br class='md:hidden' /> the tools you need to bring your ideas to life.",
+      "callToAction": "Join The Waitlist",
+      "socialProof": "Join {COUNT} others waiting for the best app ever!"
+    },
+    "FeatureSection": {
+      "features": []
+    },
+    "Config": {
+      "firebase": {
+        "appId": "",
+        "apiKey": "",
+        "authDomain": "",
+        "projectId": "",
+        "storageBucket": "",
+        "measurementId": "",
+        "messagingSenderId": ""
+      },
+      "theme": {
+        "primary": {
+          "default": "#000000",
+          "alpha": "rgba(0,0,0,0.05)"
+        },
+        "inverse": "#FFFFFF"
+      }
+    }
+  }
+}
