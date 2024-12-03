@@ -8,8 +8,6 @@
     "clean": "rimraf -rf node_modules .turbo dist out */*/.turbo */packages/dist */*/.next */*/node_modules */bun.lockb */*/bun.lockb"
   },
   "dependencies": {
-    "object-to-css-variables": "^0.2.1",
-    "react-toastify": "^10.0.6",
     "saitamadotfun": "^0.0.0-ui-fix"
   },
   "devDependencies": {
@@ -18,5 +16,6 @@
   },
   "workspaces": [
     "templates/**"
-  ]
+  ],
+  "trustedDependencies": ["saitamadotfun"]
 }

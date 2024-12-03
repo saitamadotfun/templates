@@ -13,6 +13,7 @@
   "dependencies": {
     "@iconify-json/fa-brands": "^1.2.0",
     "@next/polyfill-module": "^15.0.3",
+    "object-to-css-variables": "^0.2.1",
     "@unocss/reset": "^0.64.0",
     "clsx": "^2.1.1",
     "firebase": "^11.0.2",
