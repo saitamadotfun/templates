@@ -1,26 +1,27 @@
 {
-  "name": "waitlist",
+  "name": "tekfinance",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx sync && next dev",
-    "build": "bun sync && next build",
-    "start": "bun sync && next start",
+    "dev": "npx sync && next dev --port=3001",
+    "build": "bun run sync && next build",
+    "start": "bun run sync && next start",
     "lint": "next lint",
-    "sync": "bun x @saitamafun/cli sync --id=NEXT_SAITAMA_SITE_ID --key=NEXT_SAITAMA_API_KEY --url=NEXT_SAITAMA_BASE_API_URL"
+    "sync": "bun x @saitamadotfun/cli sync --id=NEXT_SAITAMA_SITE_ID --key=NEXT_SAITAMA_API_KEY --url=NEXT_SAITAMA_BASE_API_URL"
   },
   "dependencies": {
     "@iconify-json/fa-brands": "^1.2.0",
     "@next/polyfill-module": "^15.0.3",
     "@unocss/reset": "^0.64.0",
     "clsx": "^2.1.1",
-    "firebase": "^11.0.2",
     "fs": "^0.0.1-security",
     "next": "^14.2.5",
     "react": "^18.3.1",
+    "react-cookie": "^7.2.2",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0"
+    "react-icons": "^5.3.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/react": "^18",

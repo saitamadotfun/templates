@@ -1,0 +1,60 @@
+@import "saitamadotfun/bunshi/index.css";
+
+@unocss default;
+@unocss preflights;
+@unocss;
+
+* {
+  scrollbar-width: none;
+  outline: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.btn {
+  @apply px-8 py-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-black rounded-md hover:bg-primary-alpha-90 active:bg-primary-alpha-80;
+}
+
+.btn-inverse {
+  @apply border border-primary text-primary rounded-md hover:bg-primary-alpha;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white rounded-md;
+}
+
+.btn-tetiary {
+  @apply bg-white text-primary rounded-md;
+}
+
+.border-gradient {
+  position: relative;
+}
+
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  @apply border border-transparent rounded-xl;
+  border-image-slice: 1;
+  background: linear-gradient(
+      to bottom,
+      var(--border-primary),
+      var(--border-secondary)
+    )
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+

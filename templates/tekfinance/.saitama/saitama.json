@@ -1,0 +1,189 @@
+{
+  "HomePage": {
+    "Header": {
+      "logo": {
+        "uri": "/icons/ic_logo.png",
+        "metadata": {
+          "alt": "TekFinance"
+        }
+      },
+      "action": {
+        "text": "Launch Bot",
+        "href": "https://t.me/TekFinanceBot"
+      },
+      "navigations": {
+        "logo": {
+          "uri": "/icons/ic_logo.png",
+          "metadata": {
+            "alt": "Tekfinance"
+          }
+        },
+        "navigations": [
+          {
+            "name": "Home",
+            "href": "/"
+          },
+          {
+            "name": "TekBot",
+            "href": "#tekbot"
+          },
+          {
+            "name": "About Us",
+            "href": "#about-us"
+          }
+        ]
+      }
+    },
+    "HeroSection": {
+      "title": "Building A <br class='page:lt-md:hidden editor:phone:hidden' />        Sustainable <br class='page:lt-md:hidden editor:phone:hidden' />        Financial <span class='text-primary'>        System</span>",
+      "subtitle": "A telegram and discord based tipping bot, enable users        <br class='page:lt-md:hidden editor:phone:hidden' /> send and tip Solana and other SPL tokens",
+      "illustration": {
+        "foreBackground": {
+          "uri": "/images/orbit.svg",
+          "metadata": {
+            "alt": "Orbit"
+          }
+        },
+        "background": {
+          "uri": "/images/robot.svg",
+          "metadata": {
+            "alt": "TekBot"
+          }
+        }
+      },
+      "tagLine": "Providing trust and Confidence <br class='page:md:hidden editor:tablet:hidden' />        for <br class='page:lt-md:hidden editor:phone:hidden' />        long term projects and communities on        <br class='page:md:hidden editor:tablet:hidden' />        <span class='text-primary'>TekFinance</span>"
+    },
+    "AboutSection": {
+      "title": "About <span className='text-primary'>Tek Finance</span>",
+      "logo": {
+        "uri": "/icons/ic_logo.png",
+        "metadata": {
+          "alt": "TekFinance"
+        }
+      },
+      "contents": {
+        "ethos": {
+          "title": "Our Ethos",
+          "content": [
+            "TekFinance is a crypto reward, gifting and distribution system             for friends, families, influencers, group managers, founders,             developers and more. <br class='page:lt-md:hidden editor:phone:hidden' /> Beyond just             rewarding and tipping, we offer loyalty programs through our             open loyalty initiatives.",
+            "TekBot is powered by TekFinance, designed specifically as an              decentralized management tool in Telegram groups and Discord              server for rewarding users in Sol and other SPL tokens.",
+            "The idea behind TekFinance tipping bot is to enable users to             send zero-fee digital assets payment using social tags to             enhance community engagement with no wallet app installs             necessary."
+          ]
+        },
+        "usages": {
+          "title": "Why use us?",
+          "reasons": [
+            {
+              "title": "Effortless crypto<br />Distribution",
+              "description": "TekFinance simplifies sending cryptocurrency to anyone using social tags, eliminating the need for complex crypto distribution."
+            },
+            {
+              "title": "Rich gifting and rewards",
+              "description": "TekFinance offers a unique crypto gifting and rewarding system beyond just tipping."
+            },
+            {
+              "title": "Loyalty Program Integration",
+              "description": "TekFinance offers an open loyalty program system that enables businesses to create crypto based reward programs, boosting customer engagement"
+            },
+            {
+              "title": "Secure and reliable platform",
+              "description": "TekFinance prioritizes security, providing a safe and reliable platform for users to send and receive theirc cryptocurreny with peace of mind."
+            },
+            {
+              "title": "Frictionless Transactions",
+              "description": "TekFinance simplifies crypto transactions with social tags, eliminating complex wallet address."
+            },
+            {
+              "title": "Fast Redeem Link",
+              "description": "TekFinance offer easy redeem link for hassle-free claiming of crypto gifts and rewards."
+            }
+          ]
+        }
+      }
+    },
+    "FeatureSection": {
+      "features": [
+        {
+          "icon": {
+            "uri": "/icons/ic_users.png",
+            "metadata": {
+              "alt": "Users"
+            }
+          },
+          "title": "Personal",
+          "description": "Users can easily transfer cryptocurrencies to their contacts using the platform"
+        },
+        {
+          "icon": {
+            "uri": "/icons/ic_communities.png",
+            "metadata": {
+              "alt": "Communities"
+            }
+          },
+          "title": "Community",
+          "description": "Community managers and project managers can use this bot to          randomly tip their community members, Perhaps during games or when          tasks are completed"
+        },
+        {
+          "icon": {
+            "uri": "/icons/ic_organisation.png",
+            "metadata": {
+              "alt": "Organisation"
+            }
+          },
+          "title": "Organisation",
+          "description": "Organisations can use TekBot to pay salaries and reward workers during award events"
+        }
+      ]
+    },
+    "Footer": {
+      "logo": {
+        "uri": "/images/logo.svg",
+        "metadata": {
+          "alt": "TekFinance"
+        }
+      },
+      "motto": "Building a sustainable Financial Reward <br className='phone:hidden' /> System On Solana",
+      "socials": [
+        {
+          "icon": "i-fa-brands:telegram",
+          "href": "https://t.me/tekfinance"
+        },
+        {
+          "icon": "i-fa-brands:twitter",
+          "href": "https://x.com/tek_finance"
+        }
+      ],
+      "footerText": "© Build by TekFinance. All rights reserved."
+    },
+    "Config": {
+      "theme": {
+        "primary": {
+          "default": "#6AF2CE",
+          "alpha": "rgba(106,242,206,0.1)",
+          "alpha20": "rgba(106,242,206,0.2)",
+          "alpha30": "rgba(106,242,206,0.3)",
+          "alpha50": "rgba(106,242,206,0.5)",
+          "alpha80": "rgba(106,242,206,0.5)",
+          "alpha90": "rgba(106,242,206,0.5)"
+        },
+        "inverse": {
+          "default": "#000000",
+          "alpha": "#FFFFFF"
+        },
+        "secondary": {
+          "default": "#5607EC",
+          "alpha": "rgba(86,7,236,0.1)",
+          "alpha20": "rgba(86,7,236,0.2)",
+          "alpha30": "rgba(86,7,236,0.3)",
+          "alpha50": "rgba(86,7,236,0.5)",
+          "alpha80": "rgba(86,7,236,0.5)",
+          "alpha90": "rgba(86,7,236,0.5)"
+        },
+        "border": {
+          "primary": "rgba(87, 7, 236, 0.5)",
+          "secondary": "#6AF2CE"
+        }
+      }
+    }
+  }
+}

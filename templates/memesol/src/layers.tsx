@@ -22,12 +22,14 @@ export const layers = [
     ),
     {
       title: "HomePage",
-      children: [Header, HeroSection, HelpSection, AboutSection, Footer, Config],
-      theme: {
-        primary: {
-          color: "red",
-        },
-      },
+      children: [
+        Header,
+        HeroSection,
+        HelpSection,
+        AboutSection,
+        Footer,
+        Config,
+      ],
     }
   ),
 ];
