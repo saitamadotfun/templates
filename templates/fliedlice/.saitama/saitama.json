@@ -1,0 +1,101 @@
+{
+  "HomePage": {
+    "Header": {
+      "logo": "FliedLice",
+      "socials": [
+        {
+          "name": "Telegram",
+          "href": "https://t.me/fliedlicetoken"
+        },
+        {
+          "name": "Twitter",
+          "href": "https://x.com/FliedLicetoken"
+        },
+        {
+          "name": "DexTools",
+          "href": "https://dexscreener.com/ethereum/0x22dA3dCbCEC36947De7C7aD3d3CA138E6d37f27d"
+        }
+      ],
+      "action": {
+        "text": "Buy Now",
+        "href": "https://dexscreener.com/ethereum/0x22dA3dCbCEC36947De7C7aD3d3CA138E6d37f27d"
+      }
+    },
+    "HeroSection": {
+      "title": "FliedLice",
+      "subtitle": "The Happiest Coin in the Crypto Bowl!",
+      "ca": "0x22dA3dCbCEC36947De7C7aD3d3CA138E6d37f27d",
+      "callAction": {
+        "href": "https://dexscreener.com/ethereum/0x22dA3dCbCEC36947De7C7aD3d3CA138E6d37f27d",
+        "buttonText": "Buy Now"
+      },
+      "mascot": {
+        "uri": "/mascot.png",
+        "metadata": {
+          "alt": "FliedLice"
+        }
+      }
+    },
+    "Tokenomic": {
+      "tokenomics": [
+        {
+          "title": "Supply",
+          "content": "1,000,000,000 Tokens"
+        },
+        {
+          "title": "Lp Burnt",
+          "content": "100% Burnt"
+        },
+        {
+          "title": "Tax",
+          "content": "Buy/Sell 0"
+        }
+      ]
+    },
+    "Faq": {
+      "title": "Frequently asked questions?",
+      "faqs": [
+        {
+          "title": "What is fliedlice?",
+          "content": "Despite the name Baby Doge Coin is actually a fun collectible              token built on Binance smart chain with the purpose to spread              awareness of animal adoption. Originally created as a meme joke              with 420 Quadrillion supply."
+        },
+        {
+          "title": "What are the fees?",
+          "content": "The community voted to remove all transfer fees so you can transfer/buy/sell now set to 0%"
+        },
+        {
+          "title": "What do you mean by decentralized?",
+          "content": "It means you don't have to trust any central organization or person              the way you would a bank. The developers cannot seize your baby doge tokens,              but they also can't return them if you send them to the wrong address.              There is no company, team, or person you may rely on to increase the value or enhancement              of baby doge."
+        },
+        {
+          "title": "How to fix insufficient output on Pancake Swap?",
+          "content": "Increase slippage to 12%"
+        }
+      ]
+    },
+    "Footer": {
+      "logo": "FliedLice",
+      "warningText": "This token is simply a memecoin with no intrinsic value or         expectation of financial return."
+    },
+    "Config": {
+      "theme": {
+        "primary": {
+          "default": "#B2E2F9"
+        },
+        "inverse": {
+          "default": "#000000",
+          "alpha": "#FFFFFF"
+        },
+        "secondary": {
+          "default": "#DF533A"
+        },
+        "alpha": {
+          "default": "#000000"
+        },
+        "tetiary": {
+          "default": "#000000"
+        }
+      }
+    }
+  }
+}
