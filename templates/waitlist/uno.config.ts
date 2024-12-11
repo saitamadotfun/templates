@@ -23,7 +23,7 @@ const prefixVariants = prefix.map((selector) =>
 
 export default defineConfig({
   content: {
-    filesystem: ["**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}"],
+    filesystem: ["**/*.{html,js,ts,jsx,tsx,vue,svelte,astro,json}"],
   },
   layers: {
     default: -1,
@@ -35,7 +35,13 @@ export default defineConfig({
     colors: {
       primary: {
         DEFAULT: "var(--primary-default)",
-        alpha: "var(--primary-alpha)",
+
+        alpha: {
+          DEFAULT: "var(--primary-alpha)",
+          "25": "var(--primary-alpha25)",
+          "50": "var(--primary-alpha50)",
+          "75": "var(--primary-alpha75)",
+        },
       },
       inverse: "var(--inverse)",
     },
@@ -57,9 +63,11 @@ export default defineConfig({
     {
       name: "@saitama/transform-device-variant",
       enforce: "pre",
-      async transform(code, _, { uno, tokens, invalidate }) {
+      async transform(code, _, { uno, invalidate }) {
         const matches = [
-          ...code.original.matchAll(/(phone|tablet):([^\s"]+)/g),
+          ...code.original.matchAll(
+            /(phone|tablet|laptop|desktop):([^\s("|')]+)/g
+          ),
         ];
         const size = uno.config.safelist.length;
         if (!matches.length) return;
@@ -85,7 +93,13 @@ export default defineConfig({
             case "tablet":
               className = "page:md:" + body;
               include.push(className);
-
+              break;
+            case "laptop":
+              className = "page:xl:" + body;
+              include.push(className);
+            case "desktop":
+              className = "page:2xl:" + body;
+              include.push(className);
               break;
           }
 

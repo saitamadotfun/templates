@@ -43,12 +43,11 @@ export const Config = block(
             control: "map",
             description: "Primary color. This will be used for backgrounds",
             keys: {
-              default: {
-                control: "color",
-              },
-              alpha: {
-                control: "color",
-              },
+              default: { control: "color" },
+              alpha: { control: "color" },
+              alpha25: { control: "color" },
+              alpha50: { control: "color" },
+              alpha75: { control: "color" },
             },
           },
           inverse: {
@@ -60,18 +59,21 @@ export const Config = block(
     },
     args: {
       firebase: {
-        appId: "",
-        apiKey: "",
-        authDomain: "",
-        projectId: "",
-        storageBucket: "",
-        measurementId: "",
-        messagingSenderId: "",
+        projectId: "saitamadotfun",
+        measurementId: "G-J9E6J7TM3G",
+        messagingSenderId: "832401933524",
+        authDomain: "saitamadotfun.firebaseapp.com",
+        apiKey: "AIzaSyA57lymHvQxL0uM3PBZ4qXOef1ctus6SzA",
+        storageBucket: "saitamadotfun.firebasestorage.app",
+        appId: "1:832401933524:web:f8d25f2359373d860ea741",
       },
       theme: {
         primary: {
           default: "#000000",
           alpha: "rgba(0,0,0,0.05)",
+          alpha25: "rgba(0,0,0,0.25)",
+          alpha50: "rgba(0,0,0,0.5)",
+          alpha75: "rgba(0,0,0,0.75)",
         },
         inverse: "#FFFFFF",
       },
