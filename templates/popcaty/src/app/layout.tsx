@@ -1,10 +1,15 @@
 import "uno.css";
-import type { Metadata } from "next";
 import { Api } from "saitamadotfun/sdk";
+import type { Metadata, Viewport } from "next";
+import { Open_Sans } from "next/font/google";
 
 import "@/globals.css";
-import { defaultFont } from "@/assets/fonts";
+import clsx from "clsx";
 import { saitamaBaseApiUrl, saitamaApiKey, siteId } from "@/config";
+
+const defaultFont = Open_Sans({
+  subsets: ["latin"],
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
@@ -22,15 +27,17 @@ export async function generateMetadata(): Promise<Metadata> {
       description: site.metadata?.description,
     };
   return {
-    title: "FliedLice | Stir frying your investments",
-    description:
-      "Discover the delightful world of Fliedlice, the latest meme coin sensation that's taking the crypto market by storm. Join the Fliedlice community today and stir up your investments with a smile.",
+    title: "PopCaty | Meme for cats",
+    description: "This is a meme for undercats. Let's go to the moon now.",
     openGraph: {
-      images: "/banner.png",
+      images: ["/bonk.png"],
     },
   };
 }
 
+export const viewport: Viewport = {
+  themeColor: "#fccd53",
+};
 
 export default function RootLayout({
   children,
@@ -38,11 +45,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={defaultFont.variable}
-    >
-      <body className="fixed inset-0 flex flex-col bg-primary">{children}</body>
+    <html lang="en">
+      <body
+        className={clsx(defaultFont.className, "fixed inset-0 flex flex-col")}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx sync && next dev",
+    "dev": "bun run sync && next dev",
     "build": "bun sync && next build",
     "start": "bun sync && next start",
     "lint": "next lint",
