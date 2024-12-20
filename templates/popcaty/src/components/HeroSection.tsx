@@ -11,6 +11,7 @@ export default block(
     );
   },
   {
+    title: "Hero Section",
     argsType: {
       name: { control: "input" },
     },

@@ -17,6 +17,7 @@ export default block(
     );
   },
   {
+    title: "Background",
     argsType: {
       image: {
         control: "asset",

@@ -58,6 +58,11 @@ export default defineConfig({
     "i-fa-brands:tiktok",
     "i-fa-brands:facebook",
     "i-fa-brands:linkedin",
+    "md:hidden",
+    "lt-md:hidden",
+    "!w-screen",
+    "!lt-xl:w-7xl",
+    "!w-lg",
   ],
   variants: [...deviceVariants, ...prefixVariants],
   transformers: [
