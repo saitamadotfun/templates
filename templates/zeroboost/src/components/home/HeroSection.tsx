@@ -27,7 +27,7 @@ export default block(
         <div
           className={clsx(
             "self-center grid grid-cols-1 grid-rows-2 px-4 tablet:grid-cols-2 tablet:grid-rows-1 tablet:gap-x-8",
-            { "animate-slide-in-up": inView }
+            { "animate-fade-in md:animate-slide-in-up": inView }
           )}
         >
           {sections.map((section, index) => (

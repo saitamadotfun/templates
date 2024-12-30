@@ -9,6 +9,7 @@ import Footer from "@/components/layout/Footer";
 import FaqSection from "@/components/home/FaqSection";
 import HeroSection from "@/components/home/HeroSection";
 import FeatureSection from "@/components/home/FeatureSection";
+import RoadmapSection from "@/components/home/RoadmapSection";
 
 export default function HomePage() {
   return (
@@ -17,7 +18,7 @@ export default function HomePage() {
         <Header {...props.HomePage.Header} />
       </div>
       <main className="flex-1 flex flex-col space-y-8">
-        <button className="self-center flex items-center space-x-4 border-2 border-primary p-1 rounded-full hover:bg-primary/10">
+        <button className="self-center flex items-center space-x-4 border-2 border-primary p-1 rounded-full hover:bg-primary-alpha">
           <div className="flex items-center space-x-2">
             <div className="bg-primary text-black px-3 py-1 rounded-full">
               Live
@@ -29,7 +30,7 @@ export default function HomePage() {
           </div>
         </button>
         <HeroSection {...props.HomePage.HeroSection} />
-        <div className="h-xs" />
+        <RoadmapSection {...props.HomePage.RoadmapSection} />
         <FeatureSection {...props.HomePage.FeatureSection} />
         <FaqSection {...props.HomePage.FaqSection} />
       </main>

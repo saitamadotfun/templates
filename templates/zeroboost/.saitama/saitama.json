@@ -35,6 +35,28 @@
         }
       ]
     },
+    "RoadmapSection": {
+      "title": "Roadmap",
+      "subtitle": "This roadmap outlines our goals and where we want to take Zeroboost Protocol.",
+      "roadmaps": [
+        {
+          "title": "Planning & Pre-Listing",
+          "description": "Laying the foundation with research, partnerships, and platform design while building community interest before the launch."
+        },
+        {
+          "title": "Close & Open Testing",
+          "description": "Refining the platform through rigorous testing phases to ensure stability, usability, and scalability for a seamless user experience."
+        },
+        {
+          "title": "Production and Whitelist Launch",
+          "description": "Launching the platform to the public with exclusive benefits for early adopters, enabling full access to trading and staking features."
+        },
+        {
+          "title": "Future developments",
+          "description": "Continuously evolving the platform with new features, enhanced tools, and expanded asset support to stay ahead in the market and meet user needs."
+        }
+      ]
+    },
     "FeatureSection": {
       "features": [
         {

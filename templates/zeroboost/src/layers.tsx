@@ -4,10 +4,10 @@ import { layer } from "saitamadotfun/bunshi";
 import { Config } from "./components/Config";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
-// import { Config } from "./components/Config";
+import FaqSection from "./components/home/FaqSection";
 import HeroSection from "./components/home/HeroSection";
 import FeatureSection from "./components/home/FeatureSection";
-import FaqSection from "./components/home/FaqSection";
+import RoadmapSection from "./components/home/RoadmapSection";
 
 export const layers = [
   layer(
@@ -23,7 +23,15 @@ export const layers = [
     ),
     {
       title: "HomePage",
-      children: [Header, HeroSection, FeatureSection, FaqSection, Footer, Config],
+      children: [
+        Header,
+        HeroSection,
+        RoadmapSection,
+        FeatureSection,
+        FaqSection,
+        Footer,
+        Config,
+      ],
     }
   ),
 ];

@@ -36,7 +36,8 @@ export default block(
           ))}
           <Link
             href={callAction.href}
-            className="flex items-center space-x-2 border-2 border-primary text-primary px-4 py-2 mx-4 rounded-md hover:bg-primary/10"
+            target="_blank"
+            className="flex items-center space-x-2 border-2 border-primary text-primary px-4 py-2 mx-4 rounded-md hover:bg-primary-alpha"
           >
             <span>{callAction.name}</span>
             <MdArrowOutward />
@@ -50,7 +51,10 @@ export default block(
             <RiMenuFill className="text-2xl" />
           </MenuButton>
           <MenuItems className="min-w-24 absolute right-4 top-16 flex flex-col bg-dark-700 p-2 rounded">
-            {navigations.map((navigation, index) => (
+            {[
+              ...navigations,
+              { name: callAction.name, path: callAction.href },
+            ].map((navigation, index) => (
               <MenuItem
                 key={index}
                 as="button"
@@ -91,7 +95,7 @@ export default block(
     },
     args: {
       logo: {
-        uri: '',
+        uri: "",
         metadata: {
           alt: "Zeroboost",
         },
