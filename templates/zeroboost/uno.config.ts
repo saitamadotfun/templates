@@ -34,7 +34,7 @@ export default defineConfig({
     "font-inter": "font-[var(--font-inter)]",
     "font-inter-tight": "font-[var(--font-inter-tight)]",
     "text-gradient-primary":
-      "bg-gradient-to-r from-white to-white/10 text-transparent bg-clip-text",
+      "bg-gradient-to-r from-black to-black/10 text-transparent bg-clip-text dark:from-white dark:to-white/10 ",
   },
   presets: [presetUno({ dark: "media" }), presetIcons()],
   theme: {

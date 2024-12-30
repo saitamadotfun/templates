@@ -6,13 +6,13 @@ import clsx from "clsx";
 export default block(
   function RoadmapSection({ title, subtitle, roadmaps }) {
     return (
-      <section className="self-center max-w-2xl flex flex-col space-y-16 p-4 md:px-8">
+      <section className="self-center max-w-2xl flex flex-col space-y-16 p-4 phone:px-8">
         <InView
           className="flex flex-col text-center"
           animateInClassName="animate-slide-in-down"
         >
-          <h1 className="text-4xl font-bold">{title}</h1>
-          <p className="max-w-sm self-center text-base text-white/75 md:text-xl">
+          <h1 className="text-4xl font-bold text-gradient-primary">{title}</h1>
+          <p className="max-w-sm self-center text-base text-black/50 dark:text-white/75 phone:text-xl">
             {subtitle}
           </p>
         </InView>
@@ -41,7 +41,7 @@ export default block(
               </div>
               <div className="flex flex-col">
                 <h1 className="text-2xl">{roadmap.title}</h1>
-                <p className="text-white/75">{roadmap.description}</p>
+                <p className="text-black/50 dark:text-white/75">{roadmap.description}</p>
               </div>
             </InView>
           ))}
