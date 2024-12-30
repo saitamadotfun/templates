@@ -1,16 +1,23 @@
 import "uno.css";
 import "@unocss/reset/tailwind.css";
-import "react-toastify/dist/ReactToastify.css";
+import { Api } from "saitamadotfun/sdk";
 
 import clsx from "clsx";
-import { Api } from "saitamadotfun/sdk";
-import { ToastContainer } from "react-toastify";
-
-import { Open_Sans } from "next/font/google";
 import type { Metadata } from "next";
+import { Inter, Inter_Tight } from "next/font/google";
 
-import "@/globals.css";
+import "./globals.css";
 import { saitamaBaseApiUrl, saitamaApiKey, siteId } from "@/config";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
+  subsets: ["latin"],
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
@@ -28,12 +35,14 @@ export async function generateMetadata(): Promise<Metadata> {
       description: site.metadata?.description,
     };
   return {
-    title: "Join waitlist",
-    description: "Be the first to know when we launch",
+    openGraph: {
+      images: ["https://ik.imagekit.io/orgk45qhh/banner.png"],
+    },
+    title: "Zeroboost | Deposit Anything to Trade Everything",
+    description:
+      "Speculate on Rising & Falling of Majors and Memes. Stake in different strategies to outperform market situations.",
   };
 }
-
-const defaultFont = Open_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -41,15 +50,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={clsx(
-          defaultFont.className,
-          "flex flex-col antialiased"
-        )}
-      >
+    <html
+      lang="en"
+      className={clsx(inter.variable, interTight.variable)}
+    >
+      <body className='flex flex-col'>
         {children}
-        <ToastContainer />
       </body>
     </html>
   );

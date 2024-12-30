@@ -5,6 +5,7 @@ dist
 secret-key
 .env
 .env.dev
+node_modules
 .env.prod
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.

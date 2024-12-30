@@ -46,7 +46,7 @@ export default function RootLayout({
       <body
         className={clsx(
           defaultFont.className,
-          "fixed inset-0 flex flex-col antialiased"
+          "flex flex-col antialiased"
         )}
       >
         {children}
