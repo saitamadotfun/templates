@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { block } from "saitamadotfun/bunshi";
@@ -5,18 +6,19 @@ import { block } from "saitamadotfun/bunshi";
 export default block(
   function Header({ icon, navigations, socials }) {
     return (
-      <header className="flex items-center p-2">
+      <header className="flex items-center bg-white text-black border border-b-8 border-black border-b-amber-500 p-2">
         <Image
           src={icon.uri}
           alt={icon.metadata?.alt}
-          width={32}
-          height={32}
+          width={64}
+          height={64}
         />
-        <div className="flex-1">
+        <div className="flex-1 flex items-center justify-center space-x-4">
           {navigations.map((navigation, index) => (
             <Link
               href={navigation.href}
               key={index}
+              className="p-2 font-bold-marker"
             >
               {navigation.name}
             </Link>
@@ -24,12 +26,10 @@ export default block(
         </div>
         <div className="flex ">
           {socials.map((social, index) => (
-            <button
+            <div
               key={index}
-              className=""
-            >
-              {social.href}
-            </button>
+              className={clsx(social.icon, "border border-b-8 p-2 rounded-md")}
+            />
           ))}
         </div>
       </header>
@@ -70,7 +70,7 @@ export default block(
     },
     args: {
       icon: {
-        uri: "",
+        uri: "/logo.png",
         metadata: {
           alt: "",
         },
@@ -88,6 +88,11 @@ export default block(
       socials: [
         {
           icon: "i-fa-brands:twitter",
+          href: "",
+        },
+
+        {
+          icon: "i-fa-brands:telegram",
           href: "",
         },
       ],

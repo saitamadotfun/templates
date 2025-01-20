@@ -1,5 +1,9 @@
 import clsx from "clsx";
 import { layer } from "saitamadotfun/bunshi";
+import Header from "./components/layout/Header";
+import Herosection from "./components/layout/Herosection";
+import PurchaseWidget from "./components/layout/PurchaseWidget";
+import Herodisplay from "./components/layout/Herodisplay";
 
 export const layers = [
   layer(
@@ -15,7 +19,7 @@ export const layers = [
     ),
     {
       title: "HomePage",
-      children: [],
+      children: [Header, Herosection, PurchaseWidget, Herodisplay],
     }
   ),
 ];
