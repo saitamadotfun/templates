@@ -19,7 +19,7 @@ const interTight = Inter_Tight({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata | undefined> {
   const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
   const site = await api.site
     .retrieve(siteId)
@@ -34,13 +34,6 @@ export async function generateMetadata(): Promise<Metadata> {
       title: site.metadata?.title,
       description: site.metadata?.description,
     };
-  return {
-    openGraph: {
-      images: [],
-    },
-    title: "Saitama | In a punch",
-    description: "Todo",
-  };
 }
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 import { block } from "saitamadotfun/bunshi";
 
 export default block(
-  function Herodisplay({ headerText, headerparagraph, character, ctaText }) {
+  function HeroDisplay({ headerText, headerparagraph, character, ctaText }) {
     return (
       <div className="flex flex-col lg:flex-row items-center justify-around bg-black text-white p-8 lg:p-16">
         <div className="max-w-lg space-y-4">

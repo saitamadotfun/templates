@@ -106,9 +106,9 @@ export default block(
             and fluctuate due to market changes. Zeroboost does not provide financial\
             advice or accept liability for any loss or damages. For more information, please see the",
       socials: [
-        { icon: "i-fa-brands:discord", name: "Discord", link: "" },
-        { icon: "i-fa-brands:telegram", name: "Telegram", link: "" },
-        { icon: "i-fa-brands:twitter", name: "Twitter", link: "" },
+        { icon: "i-fa-brands:discord", name: "Discord", link: "https://discord.gg/V6GmYzWN" },
+        { icon: "i-fa-brands:telegram", name: "Telegram", link: "https://t.me/zeroboost" },
+        { icon: "i-fa-brands:twitter", name: "Twitter", link: "https://x.com/zer0boost" },
       ],
       links: [
         { name: "Terms", href: "" },

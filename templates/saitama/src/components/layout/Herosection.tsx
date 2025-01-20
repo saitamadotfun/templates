@@ -2,7 +2,7 @@ import Image from "next/image";
 import { block } from "saitamadotfun/bunshi";
 
 export default block(
-  function Herosection({ backgroundImage, tagText, character }) {
+  function HeroSection({ backgroundImage, tagText, character }) {
     return (
       <div className="relative my-6 h-2xl mb-10 flex flex-col">
         <img
