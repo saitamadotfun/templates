@@ -2,50 +2,87 @@ import Link from "next/link";
 import { block } from "saitamadotfun/bunshi";
 
 export default block(
-  function Footer({ socials, legal, disclaimer, links }) {
+  function Footer({
+    logo,
+    socials,
+    disclaimer,
+    legal,
+    contract,
+    ctaText,
+    copyText,
+  }) {
     return (
-      <footer className="flex flex-col space-y-4  p-4 tablet:p-8 tablet:space-y-8 tablet:max-w-7xl">
-        <div className="flex space-x-4 text-2xl">
-          {socials.map((social, index) => (
-            <button
-              key={index}
-              className="p-2 hover:transition-all hover:-translate-y-2"
-            >
-              <div className={social.icon} />
+      <footer className="flex flex-col mt-10 items-center space-y-4 bg-yellow-300 p-4 tablet:p-8 tablet:space-y-8 tablet:max-w-7xl">
+        <div className="flex justify-between w-full max-w-5xl">
+          <div className="flex items-center bg-white rounded-full border  p-3 shadow-md space-x-4">
+            <img
+              src={logo.uri}
+              alt={logo.metadata?.alt}
+              className="h-6"
+            />
+            <div className="flex space-x-2">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  className="p-2 hover:-translate-y-1 transition"
+                >
+                  <div className={social.icon} />
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center bg-white rounded-full p-3 shadow-md space-x-4">
+            <div className="flex space-x-2">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  className="p-2 hover:-translate-y-1 transition"
+                >
+                  <div className={social.icon} />
+                </a>
+              ))}
+            </div>
+            <button className="bg-yellow-400 border border-black text-black rounded-full px-6 py-2 font-bold shadow-md">
+              {ctaText}
             </button>
-          ))}
-        </div>
-        <div className="flex flex-col space-y-4">
-          <p>{legal}</p>
-          <small className="text-black/50 dark:text-white/55">
-            {disclaimer}&nbsp;
-            <a
-              href=""
-              className="underline"
-            >
-              Terms of Use
-            </a>
-          </small>
-          <div className="flex space-x-4">
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className="text-black/50 hover:text-black dark:text-white/55 dark:hover:text-white"
-              >
-                {link.name}
-              </Link>
-            ))}
+            <span className="text-black text-sm font-semibold">
+              CR: {contract.address}
+            </span>
+            <button className="bg-yellow-400 text-black border border-black rounded-full px-6 py-2 font-bold shadow-md">
+              {copyText}
+            </button>
           </div>
         </div>
+
+        <div className="text-center text-sm italic text-gray-700">{legal}</div>
+
+        <p className="text-center text-xs max-w-3xl text-gray-700">
+          {disclaimer}
+        </p>
       </footer>
     );
   },
   {
     title: "Footer",
     argsType: {
-      legal: { control: "input" },
+      logo: { control: "asset" },
+
       disclaimer: { control: "input", inputType: "textarea" },
+      // socials: {
+      //   control: "list",
+      //   items: [
+      //     {
+      //       control: "map",
+      //       keys: {
+      //         icon: { control: "input" },
+      //         link: { control: "input" },
+      //       },
+      //     },
+      //   ],
+      // },
+
       socials: {
         control: "list",
         items: [
@@ -84,36 +121,40 @@ export default block(
           },
         ],
       },
-      links: {
-        control: "list",
-        items: [
-          {
-            control: "map",
-            title: (props: { name: string }) => props.name,
-            keys: {
-              name: { control: "input" },
-              href: { control: "input" },
-            },
-          },
-        ],
+      legal: { control: "input" },
+      ctaText: { control: "input" },
+      copyText: { control: "input" },
+      contract: {
+        control: "map",
+        keys: {
+          address: { control: "input" },
+        },
       },
     },
     args: {
-      legal: "© 2024 Zeroboost Digital Ltd. All rights reserved.",
-      disclaimer:
-        "Trading digital currency entails significant risk and is not\
-            appropriate for all users. Digital currency values are not static\
-            and fluctuate due to market changes. Zeroboost does not provide financial\
-            advice or accept liability for any loss or damages. For more information, please see the",
+      logo: {
+        uri: "/ic_logo.png",
+        metadata: {
+          alt: "logo",
+        },
+      },
+      // socials: [
+      //   { icon: "i-fa-brands:telegram", link: "#" },
+      //   { icon: "i-fa-brands:twitter", link: "#" },
+      //   { icon: "i-fa-brands:reddit", link: "#" },
+      // ],
+
       socials: [
         { icon: "i-fa-brands:discord", name: "Discord", link: "" },
         { icon: "i-fa-brands:telegram", name: "Telegram", link: "" },
         { icon: "i-fa-brands:twitter", name: "Twitter", link: "" },
       ],
-      links: [
-        { name: "Terms", href: "" },
-        { name: "Privacy", href: "" },
-      ],
+      ctaText: "Buy Now",
+      copyText: "Copy",
+      contract: { address: "0xch345..." },
+      legal: "© 2024 Zeroboost Digital Ltd. All rights reserved.",
+      disclaimer:
+        "Trading digital currency entails significant risk and is not appropriate for all users. Digital currency values are not staticand fluctuate due to market changes. Zeroboost does not provide financial advice or accept liability for any loss or damages. For more information, please see the",
     },
   }
 );

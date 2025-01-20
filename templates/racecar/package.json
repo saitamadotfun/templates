@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun run sync && next dev --port=3002",
+    "dev": "bun run sync && next dev --port=3005",
     "build": "bun sync && next build",
     "start": "bun sync && next start",
     "lint": "next lint",

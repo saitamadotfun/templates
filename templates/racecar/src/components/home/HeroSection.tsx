@@ -1,88 +1,118 @@
-"use client";
+// import { block } from "saitamadotfun/bunshi";
 
-import clsx from "clsx";
+// export default block(
+//   function Herosection({ backgroundImage, tagText, character }) {
+//     const [firstLine, secondLine] = tagText.split(" ");
+//     return (
+//       <div className="relative z-10 h-2xl space-y-10 flex flex-col">
+//         <img
+//           src={backgroundImage.uri}
+//           alt={backgroundImage.metadata?.alt}
+//           className="h-2xl z-10 w-92 mx-auto object-cover"
+//         />
+
+//         <div className="absolute top-[40%] py-4 bottom-[20%] left-[25%] right-[25%] inset-0 flex flex-col items-center justify-center z-20">
+//           <div className="text-center relative top-[40%]">
+//             <h1 className="ghost-text-size font-race-sport  text-infinity leading-10 font-black text-black uppercase mb-40 ghost-text">
+//               {firstLine}
+//             </h1>
+//             <h1 className="ghost-text-size font-race-sport  text-infinity font-black text-black uppercase ghost-text">
+//               {secondLine}
+//             </h1>
+//           </div>
+
+//           <img
+//             src={character.uri}
+//             alt={character.metadata?.alt}
+//             width={700}
+//             height={700}
+//             className="z-40"
+//           />
+//         </div>
+//       </div>
+//     );
+//   },
+//   {
+//     argsType: {
+//       backgroundImage: { control: "asset" },
+//       tagText: { control: "input" },
+//       character: { control: "asset" },
+//     },
+
+//     args: {
+//       backgroundImage: {
+//         uri: "/il_yellow_bg.png",
+//         metadata: {
+//           alt: "Background",
+//         },
+//       },
+//       tagText: "Race Brew",
+//       character: {
+//         uri: "/il_race_car.png",
+//         metadata: {
+//           alt: "Character",
+//         },
+//       },
+//     },
+//   }
+// );
+
 import { block } from "saitamadotfun/bunshi";
-import { MdArrowOutward } from "react-icons/md";
-import { useInView } from "react-intersection-observer";
 
 export default block(
-  function HeroSection({ tagLine, sections, style }) {
-    const { ref, inView } = useInView();
-
+  function Herosection({ backgroundImage, tagText, character }) {
+    const [firstLine, secondLine] = tagText.split(" ");
     return (
-      <section
-        ref={ref}
-        style={style}
-        className="flex flex-col space-y-32"
-      >
-        <div
-          className={clsx("h-xs flex flex-col tablet:h-4xl", {
-            "animate-slide-in-up": inView,
-          })}
-        >
-          <h1 className="max-w-xs m-auto text-5xl font-extrabold text-center tracking-tight text-gradient-primary tablet:max-w-2xl tablet:text-8xl">
-            {tagLine}
-          </h1>
+      <div className="relative z-10 h-2xl flex flex-col">
+        <img
+          src={backgroundImage.uri}
+          alt={backgroundImage.metadata?.alt}
+          className="h-2xl z-10 w-5/10 sm:w-10/12 md:w-8/12 lg:w-4/10 mx-auto object-cover"
+        />
+
+        <div className="absolute top-[40%] py-4 bottom-[20%] left-[10%] sm:left-[15%] md:left-[20%] lg:left-[25%] right-[10%] sm:right-[15%] md:right-[20%] lg:right-[25%] inset-0 flex flex-col items-center justify-center z-20">
+          <div className="text-center relative top-[40%] space-y-4">
+            <h1 className="ghost-text-size font-race-sport text-infinity leading-10 font-black text-black uppercase mb-40 ghost-text">
+              {firstLine}
+            </h1>
+
+            <h1 className="ghost-text-size font-race-sport  text-infinity leading-10 font-black text-black uppercase mb-40 ghost-texs">
+              {secondLine}
+            </h1>
+          </div>
+
+          <img
+            src={character.uri}
+            alt={character.metadata?.alt}
+            width={400}
+            height={400}
+            className="z-40 w-40 sm:w-60 md:w-80 lg:w-[700px]"
+          />
         </div>
-        <div
-          className={clsx(
-            "self-center grid grid-cols-1 grid-rows-2 px-4 tablet:grid-cols-2 tablet:grid-rows-1 tablet:gap-x-8",
-            { "animate-fade-in md:animate-slide-in-up": inView }
-          )}
-        >
-          {sections.map((section, index) => (
-            <div
-              key={index}
-              className={clsx(
-                "flex flex-col text-xl font-inter font-medium tracking-wide border-b border-b-dark px-4 py-8 cursor-pointer tablet:tracking-wider tablet:min-w-md tablet:text-2xl tablet:px-8 desktop:max-w-lg",
-                index % 2 === 0
-                  ? "hover:border-b-purple-500 hover:bg-gradient-to-t hover:from-purple-500/20 hover:to-black/0"
-                  : "hover:border-b-primary  hover:bg-gradient-to-t hover:from-primary-alpha hover:to-black/0"
-              )}
-            >
-              <p>{section.title}</p>
-              <div className="flex-1 flex flex-col space-y-8 text-black/50 dark:text-white/75">
-                <p className="flex-1">{section.description}</p>
-                <MdArrowOutward className="text-2xl" />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      </div>
     );
   },
   {
-    title: "HeroSection",
     argsType: {
-      tagLine: { control: "input" },
-      sections: {
-        control: "list",
-        items: [
-          {
-            control: "map",
-            title: (props: { title: string }) => props.title,
-            keys: {
-              title: { control: "input" },
-              description: { control: "input", inputType: "textarea" },
-            },
-          },
-        ],
-      },
+      backgroundImage: { control: "asset" },
+      tagText: { control: "input" },
+      character: { control: "asset" },
     },
+
     args: {
-      tagLine: "Speculate on Rising & Falling of Majors and Memes",
-      sections: [
-        {
-          title: "Explore ZeroBoost",
-          description:
-            "Stake in different strategies to outperform market situations.",
+      backgroundImage: {
+        uri: "/il_yellow_bg.png",
+        metadata: {
+          alt: "Background",
         },
-        {
-          title: "Deposit Memecoins",
-          description:
-            "The widest range of trading collateral and the highest LTVs.",
+      },
+      tagText: "Race Brew",
+      character: {
+        uri: "/il_race_car.png",
+        metadata: {
+          alt: "Character",
         },
-      ],
+      },
     },
   }
 );
