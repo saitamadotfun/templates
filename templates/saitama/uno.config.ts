@@ -31,6 +31,8 @@ export default defineConfig({
     utilities: 1,
   },
   shortcuts: {
+    "btn": "border border-b-6 border-black p-2 rounded-md transition-all hover:scale-90",
+    "font-bold-marker": "font-[var(--font-bold-marker)]",
     "font-inter": "font-[var(--font-inter)]",
     "font-inter-tight": "font-[var(--font-inter-tight)]",
     "text-gradient-primary":
@@ -46,6 +48,9 @@ export default defineConfig({
       alpha: {
         DEFAULT: "var(--alpha-default)",
       },
+      inverse: {
+        DEFAULT: "var(--inverse-default)",
+      }
     },
     fonts: [],
   },

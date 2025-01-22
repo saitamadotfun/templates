@@ -1,34 +1,29 @@
 {
   "HomePage": {
-    "Header": {
-      "icon": {
-        "uri": "/logo.png",
-        "metadata": {
-          "alt": ""
-        }
-      },
-      "navigations": [
-        {
-          "name": "About",
-          "href": "#about"
-        },
-        {
-          "name": "How to buy",
-          "href": "#how-to-buy"
-        }
-      ],
-      "socials": [
-        {
-          "icon": "i-fa-brands:twitter",
-          "href": ""
-        },
-        {
-          "icon": "i-fa-brands:telegram",
-          "href": ""
-        }
-      ]
-    },
     "HeroSection": {
+      "header": {
+        "icon": "Saitama",
+        "navigations": [
+          {
+            "name": "About",
+            "href": "#about"
+          },
+          {
+            "name": "How to buy",
+            "href": "#how-to-buy"
+          }
+        ],
+        "socials": [
+          {
+            "icon": "i-fa-brands:twitter",
+            "href": ""
+          },
+          {
+            "icon": "i-fa-brands:telegram",
+            "href": ""
+          }
+        ]
+      },
       "backgroundImage": {
         "uri": "/hero_section_bg.png",
         "metadata": {
@@ -37,124 +32,151 @@
       },
       "tagText": "Saitama",
       "character": {
-        "uri": "/saitama.png",
+        "uri": "/il_saitama.png",
         "metadata": {
           "alt": "Saitama"
         }
+      },
+      "purchase": {
+        "ca": "CA: TBk4dXtfo6j3rxPc1VJDhA7BsVi2XHK1bi",
+        "dexes": [
+          {
+            "icon": {
+              "uri": "/ic_dexscreener.png",
+              "metadata": {
+                "alt": "DexScreener"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_dextools.png",
+              "metadata": {
+                "alt": "DexTools"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coinmarketcap.png",
+              "metadata": {
+                "alt": "CoinMarketcap"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coingecko.png",
+              "metadata": {
+                "alt": "Coin gecko"
+              }
+            },
+            "href": ""
+          }
+        ]
       }
     },
-    "PurchaseWidget": {
-      "ctaText": "Buy Now",
-      "icon1": {
-        "uri": "/logo1.png",
-        "metadata": {
-          "alt": "Logo 1"
-        }
-      },
-      "icon2": {
-        "uri": "/logo2.png",
-        "metadata": {
-          "alt": "Logo 2"
-        }
-      },
-      "icon3": {
-        "uri": "/logo3.png",
-        "metadata": {
-          "alt": "Logo 3"
-        }
-      },
-      "icon4": {
-        "uri": "/logo4.png",
-        "metadata": {
-          "alt": "Logo 4"
-        }
-      },
-      "address": "CA:TBk4xKfo6i3npPcV1DjhA78zWl2XHK1bi",
-      "copyAddressText": "Copy"
-    },
     "HeroDisplay": {
-      "headerText": "IN A PUNCH",
-      "headerparagraph": "Saitama is the main protagonist of the anime and manga series One Punch Man, created by ONE. He is a hero who can defeat any opponent with a single punch, leading to a lack of challenge and excitement in his life. Known for his unassuming bald appearance and simple personality, Saitama began his hero journey as a hobby after intense training that left him overwhelmingly strong. Despite his unmatched power, he remains humble, often struggling to gain recognition in the Hero Association. His character blends humor, satire, and action, making him a unique and beloved figure in modern anime.",
-      "character": {
-        "uri": "/satama.png",
+      "title": "In a punch",
+      "description": "Saitama is the main protagonist of the anime and manga series        One Punch Man, created by ONE. He is a hero who can defeat any         opponent with a single punch, leading to a lack of challenge and        excitement in his life. Known for his unassuming bald appearance         and simple personality, Saitama began his hero journey as a hobby         after intense training that left him overwhelmingly strong. Despite        his unmatched power, he remains humble, often struggling to gain         recognition in the Hero Association. His character blends humor,         satire, and action, making him a unique and beloved figure in modern anime.",
+      "illustration": {
+        "uri": "/il_satama_stand.png",
         "metadata": {
-          "alt": "Satama"
+          "alt": "Sataima"
         }
       },
-      "ctaText": "BUY NOW"
+      "buyAction": {
+        "name": "BUY NOW",
+        "href": ""
+      }
     },
     "HowToBuy": {
+      "icon": {
+        "uri": "/il_saitama_suprised.png",
+        "metadata": {
+          "alt": "Saitama Suprised"
+        }
+      },
       "steps": [
         {
-          "icon": {
-            "uri": "/saitamaIcon.png",
-            "metadata": {
-              "alt": "Step 1"
-            }
-          },
           "title": "Create a Wallet",
           "description": "Download a Solana wallet. We recommend Phantom or Solflare. These can be downloaded from the app store or as Chrome extensions for desktop users."
         },
         {
-          "icon": {
-            "uri": "/saitamaIcon.png",
-            "metadata": {
-              "alt": "Step 2"
-            }
-          },
           "title": "Add Solana",
           "description": "Add SOL to your wallet. You can do this by purchasing SOL from a trusted exchange and transferring it to your wallet address."
         },
         {
-          "icon": {
-            "uri": "/saitamaIcon.png",
-            "metadata": {
-              "alt": "Step 3"
-            }
-          },
-          "title": "Swap SOL for TARD",
-          "description": "Use a decentralized exchange to swap your SOL tokens for TARD tokens."
+          "title": "Swap SOL for SAT",
+          "description": "Use a decentralized exchange to swap your SOL tokens for SAT tokens."
         },
         {
-          "icon": {
-            "uri": "/saitamaIcon.png",
-            "metadata": {
-              "alt": "Step 4"
-            }
-          },
-          "title": "Welcome to TARD",
+          "title": "Welcome to SAT",
           "description": "You now own TARD tokens. Enjoy the benefits!"
         }
       ]
     },
     "Footer": {
       "ctaText": "Buy Now",
-      "icon1": {
-        "uri": "/logo1.png",
-        "metadata": {
-          "alt": "Logo 1"
-        }
+      "purchase": {
+        "dexes": [
+          {
+            "icon": {
+              "uri": "/ic_dexscreener.png",
+              "metadata": {
+                "alt": "DexScreener"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_dextools.png",
+              "metadata": {
+                "alt": "DexTools"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coinmarketcap.png",
+              "metadata": {
+                "alt": "CoinMarketcap"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coingecko.png",
+              "metadata": {
+                "alt": "Coin gecko"
+              }
+            },
+            "href": ""
+          }
+        ]
       },
-      "icon2": {
-        "uri": "/logo2.png",
-        "metadata": {
-          "alt": "Logo 2"
+      "legal": {
+        "title": "ALL RIGHTS RESERVED, 2025",
+        "detail": "WE WANT THIS PROJECT TO SUCCEED AND BECOME THE TOP MEME COIN ON COINMARKETCAP, AND WE WILL DO EVERYTHING IN OUR POWER TO ACHIEVE THIS. HOWEVER, REMEMBER THE RISKS AND ALWAYS TAKE RESPONSIBILITY FOR THEM. IT IS IMPORTANT TO THINK FOR YOURSELF."
+      }
+    },
+    "Config": {
+      "theme": {
+        "primary": {
+          "default": "#FFCA00",
+          "alpha": "#FFF6D6"
+        },
+        "inverse": {
+          "default": "#FFF9E4",
+          "alpha": "#FFFFFF"
         }
-      },
-      "icon3": {
-        "uri": "/logo3.png",
-        "metadata": {
-          "alt": "Logo 3"
-        }
-      },
-      "icon4": {
-        "uri": "/logo4.png",
-        "metadata": {
-          "alt": "Logo 4"
-        }
-      },
-      "text": "ALL RIGHTS RESERVED, 2025",
-      "text1": "WE WANT THIS PROJECT TO SUCCEED AND BECOME THE TOP MEME COIN ON COINMARKETCAP, AND WE WILL DO EVERYTHING IN OUR POWER TO ACHIEVE THIS. HOWEVER, REMEMBER THE RISKS AND ALWAYS TAKE RESPONSIBILITY FOR THEM. IT IS IMPORTANT TO THINK FOR YOURSELF."
+      }
     }
   }
 }

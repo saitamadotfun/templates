@@ -4,6 +4,7 @@ import { Api } from "saitamadotfun/sdk";
 
 import clsx from "clsx";
 import type { Metadata } from "next";
+import LocalFont from "next/font/local";
 import { Inter, Inter_Tight } from "next/font/google";
 
 import "./globals.css";
@@ -17,6 +18,11 @@ const inter = Inter({
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],
+});
+
+const boldMarker = LocalFont({
+  src: "../assets/fonts/Bold-Marker.otf",
+  variable: "--font-bold-marker",
 });
 
 export async function generateMetadata(): Promise<Metadata | undefined> {
@@ -44,9 +50,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(inter.variable, interTight.variable)}
+      className={clsx(inter.variable, interTight.variable, boldMarker.variable)}
     >
-      <body className="flex flex-col">{children}</body>
+      <body className="flex flex-col overflow-x-hidden">{children}</body>
     </html>
   );
 }

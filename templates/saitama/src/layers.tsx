@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import { layer } from "saitamadotfun/bunshi";
+
+import Config from "./components/Config";
 import Footer from "./components/layout/Footer";
-import Header from "./components/layout/Header";
-import HowToBuy from "./components/layout/HowToBuy";
-import HeroDisplay from "./components/layout/HeroDisplay";
-import HeroSection from "./components/layout/HeroSection";
-import PurchaseWidget from "./components/layout/PurchaseWidget";
+import HowToBuy from "./components/home/HowToBuy";
+import HeroDisplay from "./components/home/HeroDisplay";
+import HeroSection from "./components/home/HeroSection";
 
 export const layers = [
   layer(
@@ -22,12 +22,11 @@ export const layers = [
     {
       title: "HomePage",
       children: [
-        Header,
         HeroSection,
-        PurchaseWidget,
         HeroDisplay,
         HowToBuy,
         Footer,
+        Config,
       ],
     }
   ),

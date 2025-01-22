@@ -1,36 +1,40 @@
-import clsx from "clsx";
-import Image from "next/image";
 import Link from "next/link";
 import { block } from "saitamadotfun/bunshi";
 
 export default block(
   function Header({ icon, navigations, socials }) {
     return (
-      <header className="flex items-center bg-white text-black border border-b-8 border-black border-b-amber-500 p-2">
-        <Image
-          src={icon.uri}
-          alt={icon.metadata?.alt}
-          width={64}
-          height={64}
-        />
-        <div className="flex-1 flex items-center justify-center space-x-4">
-          {navigations.map((navigation, index) => (
-            <Link
-              href={navigation.href}
-              key={index}
-              className="p-2 font-bold-marker"
-            >
-              {navigation.name}
-            </Link>
-          ))}
-        </div>
-        <div className="flex ">
-          {socials.map((social, index) => (
-            <div
-              key={index}
-              className={clsx(social.icon, "border border-b-8 p-2 rounded-md")}
-            />
-          ))}
+      <header className="mx-auto py-2 z-10 phone:mx-4 tablet:w-4xl">
+        <div className="flex items-center bg-white text-black border border-b-8 border-black border-b-primary p-2 rounded-md">
+          <Link
+            href="/"
+            className="font-bold-marker text-2xl text-primary text-stroke-1.5 text-stroke-black md:text-3xl"
+          >
+            {icon}
+          </Link>
+          <div className="flex-1 flex items-center justify-center space-x-4">
+            {navigations.map((navigation, index) => (
+              <Link
+                href={navigation.href}
+                key={index}
+                className="p-2 font-bold-marker text-base tablet:text-xl"
+              >
+                {navigation.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex space-x-2">
+            {socials.map((social, index) => (
+              <Link
+                key={index}
+                className="btn"
+                href={social.href}
+              >
+                <div className={social.icon} />
+              </Link>
+            ))}
+          </div>
         </div>
       </header>
     );
@@ -38,7 +42,7 @@ export default block(
   {
     argsType: {
       icon: {
-        control: "asset",
+        control: "input",
       },
       navigations: {
         control: "list",
@@ -69,12 +73,7 @@ export default block(
       },
     },
     args: {
-      icon: {
-        uri: "/logo.png",
-        metadata: {
-          alt: "",
-        },
-      },
+      icon: "Saitama",
       navigations: [
         {
           name: "About",
