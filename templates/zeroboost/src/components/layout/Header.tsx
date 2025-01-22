@@ -7,7 +7,6 @@ import { RiMenuFill } from "react-icons/ri";
 import { MdArrowOutward } from "react-icons/md";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
 
-import { IcZeroboost } from "@/assets";
 
 export default block(
   function Header({ navigations, logo, callAction }) {
@@ -18,7 +17,7 @@ export default block(
           className="flex-1"
         >
           <Image
-            src={IcZeroboost}
+            src={logo.uri}
             alt={logo.metadata.alt}
             width={72}
             height={72}
@@ -76,7 +75,7 @@ export default block(
         control: "map",
         keys: {
           name: { control: "input" },
-          href: { control: "input" },
+          href: { control: "input"},
         },
       },
       navigations: {
@@ -95,7 +94,7 @@ export default block(
     },
     args: {
       logo: {
-        uri: "",
+        uri: "/ic_zeroboost.svg",
         metadata: {
           alt: "Zeroboost",
         },

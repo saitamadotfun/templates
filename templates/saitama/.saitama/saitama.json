@@ -88,8 +88,8 @@
           "alt": "Sataima"
         }
       },
-      "buyAction": {
-        "name": "BUY NOW",
+      "action": {
+        "name": "Buy now",
         "href": ""
       }
     },

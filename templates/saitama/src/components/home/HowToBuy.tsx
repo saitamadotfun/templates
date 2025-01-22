@@ -62,6 +62,7 @@ export default block(
     );
   },
   {
+    title: "HowToBuy",
     argsType: {
       icon: { control: "asset" },
       steps: {
@@ -69,10 +70,8 @@ export default block(
         items: [
           {
             control: "map",
+            title: (props: { title: string }) => props.title,
             keys: {
-              icon: {
-                control: "asset",
-              },
               title: { control: "input" },
               description: { control: "input" },
             },

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { block } from "saitamadotfun/bunshi";
+import type { Asset } from "saitamadotfun/sdk";
 
 import Header from "../layout/Header";
 
@@ -68,6 +69,7 @@ export default block(
     );
   },
   {
+    title: "HeroSection",
     argsType: {
       header: {
         control: "map",
@@ -85,6 +87,16 @@ export default block(
             items: [
               {
                 control: "map",
+                title: (props: { icon: Asset }) => (
+                  <div className="flex space-x-2 items-center">
+                    <img
+                      src={props.icon.uri}
+                      width={24}
+                      height={24}
+                    />
+                    <span>{props.icon.metadata?.alt}</span>
+                  </div>
+                ),
                 keys: {
                   icon: { control: "asset" },
                   href: { control: "input" },

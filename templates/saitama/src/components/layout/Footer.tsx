@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { block } from "saitamadotfun/bunshi";
+import type { Asset } from "saitamadotfun/sdk";
 
 export default block(
   function Footer({ purchase, legal }) {
@@ -10,7 +11,7 @@ export default block(
           <div className="flex flex-col bg-white text-black border border-b-8 border-black border-b-primary rounded-xl phone:mx-4 tablet:mx-auto tablet:w-4xl">
             <div className=" flex items-center bg-white border border-black px-4 py-2 rounded-lg">
               <div className="flex-1 flex">
-                <button className="bg-primary text-black px-4 py-2 border border-b-8 border-black rounded">
+                <button className="btn-primary">
                   Buy now
                 </button>
               </div>
@@ -36,11 +37,10 @@ export default block(
           </div>
 
           <div className="mx-auto max-w-6xl flex flex-col space-y-2">
-            <p className="text-lg font-bold-marker tracking-widest">
-              {legal.title}
+            <p className="text-lg font-bold-marker uppercase tracking-widest">
+              {legal.title.replace("{date}", new Date().getFullYear().toString())}
             </p>
-            <p className="text-xs text-white/75 tablet:text-sm">
-              {" "}
+            <p className="text-xs text-white/75 uppercase tablet:text-sm">
               {legal.detail}
             </p>
           </div>
@@ -48,8 +48,8 @@ export default block(
       </footer>
     );
   },
-
   {
+    title: "Footer",
     argsType: {
       purchase: {
         control: "map",
@@ -58,6 +58,16 @@ export default block(
             control: "list",
             items: [
               {
+                title: (props: { icon: Asset }) => (
+                  <div className="flex space-x-2 items-center">
+                    <img
+                      src={props.icon.uri}
+                      width={24}
+                      height={24}
+                    />
+                    <span>{props.icon.metadata?.alt}</span>
+                  </div>
+                ),
                 control: "map",
                 keys: {
                   icon: { control: "asset" },
@@ -120,9 +130,9 @@ export default block(
         ],
       },
       legal: {
-        title: "ALL RIGHTS RESERVED, 2025",
+        title: "All rights reserved, {date}",
         detail:
-          "WE WANT THIS PROJECT TO SUCCEED AND BECOME THE TOP MEME COIN ON COINMARKETCAP, AND WE WILL DO EVERYTHING IN OUR POWER TO ACHIEVE THIS. HOWEVER, REMEMBER THE RISKS AND ALWAYS TAKE RESPONSIBILITY FOR THEM. IT IS IMPORTANT TO THINK FOR YOURSELF.",
+          "We want this project to succeed and become the top meme coin on coinmarketcap, and we will do everything in our power to achieve this. however, remember the risks and always take responsibility for them. it is important to think for yourself.",
       },
     },
   }

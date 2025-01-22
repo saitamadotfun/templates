@@ -2,14 +2,22 @@ import Link from "next/link";
 import { block } from "saitamadotfun/bunshi";
 
 export default block(
-  function HeroDisplay({ title, description, illustration, buyAction }) {
+  function HeroDisplay({ title, description, illustration, action }) {
     return (
       <div className="relative flex h-2xl bg-black tablet:h-4xl">
         <div className="size-xs absolute -left-24 bottom-0 bg-inverse opacity-50 blur-[128px] rounded-full tablet:size-lg" />
         <div className="mx-auto w-9/10 relative flex p-4 desktop:w-7/11">
-          <div className="max-w-xl flex flex-col py-32  space-y-4 tracking-wide z-10 laptop:max-w-2xl">
-            <h1 className="text-2xl font-bold-marker">{title}</h1>
-            <p className="text-white/75">{description}</p>
+          <div className="max-w-xl flex flex-col space-y-8 py-32 z-10 laptop:max-w-2xl">
+            <div className="flex flex-col space-y-8">
+              <h1 className="text-2xl font-bold-marker">{title}</h1>
+              <p className="text-white/75 tracking-wide">{description}</p>
+            </div>
+            <Link
+              href={action.href}
+              className="self-start btn-primary"
+            >
+              {action.name}
+            </Link>
           </div>
           <img
             src={illustration.uri}
@@ -22,17 +30,17 @@ export default block(
       </div>
     );
   },
-
   {
+    title: "HeroDisplay",
     argsType: {
       title: { control: "input" },
-      description: { control: "input" },
+      description: { control: "input", inputType: "textarea", },
       illustration: { control: "asset" },
-      buyAction: {
+      action: {
         control: "map",
         keys: {
           name: { control: "input" },
-          href: { control: "input" },
+          href: { control: "input", description: "Link to" },
         },
       },
     },
@@ -54,8 +62,8 @@ export default block(
           alt: "Sataima",
         },
       },
-      buyAction: {
-        name: "BUY NOW",
+      action: {
+        name: "Buy now",
         href: "",
       },
     },

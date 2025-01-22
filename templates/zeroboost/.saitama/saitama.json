@@ -22,6 +22,9 @@
         }
       ]
     },
+    "TradeNow": {
+      "link": ""
+    },
     "HeroSection": {
       "tagLine": "Speculate on Rising & Falling of Majors and Memes",
       "sections": [
@@ -108,17 +111,17 @@
         {
           "icon": "i-fa-brands:discord",
           "name": "Discord",
-          "link": ""
+          "link": "https://discord.gg/V6GmYzWN"
         },
         {
           "icon": "i-fa-brands:telegram",
           "name": "Telegram",
-          "link": ""
+          "link": "https://t.me/zeroboost"
         },
         {
           "icon": "i-fa-brands:twitter",
           "name": "Twitter",
-          "link": ""
+          "link": "https://x.com/zer0boost"
         }
       ],
       "links": [

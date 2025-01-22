@@ -1,6 +1,4 @@
-import { Viewport } from "next";
-
-import props from "../../.saitama/saitama.json";
+import type { Viewport } from "next";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -9,27 +7,26 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import FeatureSection from "@/components/FeatureSection";
 
+import { getProps } from "@/actions/saveProps";
+
 export const viewport: Viewport = {
-  themeColor: "#6AF2CE",
   colorScheme: "dark",
 };
 
-export default function Home() {
+export default async function Home() {
+  const props = await getProps();
+
   return (
     <body className="page flex flex-col bg-black text-white text-[14px] overflow-x-hidden overflow-y-scroll">
       <div className="flex-1 flex flex-col bg-gradient-to-r from-primary-alpha overflow-x-hidden overflow-y-scroll">
         <div className="flex flex-col space-y-32 desktop:self-center">
-          <div>
-            <Header {...props.HomePage.Header} />
+          <Header {...props.HomePage.Header} />
+          <div className="flex flex-col space-y-16">
+            <HeroSection {...props.HomePage.HeroSection} />
+            <FeatureSection {...props.HomePage.FeatureSection} />
+            <AboutSection {...props.HomePage.AboutSection} />
           </div>
-          <div>
-            <div className="flex flex-col space-y-16">
-              <HeroSection {...props.HomePage.HeroSection} />
-              <FeatureSection {...props.HomePage.FeatureSection} />
-              <AboutSection {...props.HomePage.AboutSection} />
-            </div>
-            <Footer {...props.HomePage.Footer} />
-          </div>
+          <Footer {...props.HomePage.Footer} />
         </div>
       </div>
       <Config {...props.HomePage.Config} />

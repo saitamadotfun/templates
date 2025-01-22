@@ -4,6 +4,7 @@ import { layer } from "saitamadotfun/bunshi";
 import { Config } from "./components/Config";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
+import TradeNow from "./components/home/TradeNow";
 import FaqSection from "./components/home/FaqSection";
 import HeroSection from "./components/home/HeroSection";
 import FeatureSection from "./components/home/FeatureSection";
@@ -25,6 +26,7 @@ export const layers = [
       title: "HomePage",
       children: [
         Header,
+        TradeNow,
         HeroSection,
         RoadmapSection,
         FeatureSection,

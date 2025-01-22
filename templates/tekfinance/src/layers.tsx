@@ -25,11 +25,9 @@ export const layers = [
           )}
         >
           <div className="flex-1 flex flex-col bg-gradient-to-r from-primary-alpha overflow-x-hidden overflow-y-scroll">
-            <div>{header}</div>
-            <div>
-              <div className="flex flex-col space-y-16">{rest}</div>
-              {footer}
-            </div>
+            {header}
+            <div className="flex flex-col space-y-16">{rest}</div>
+            {footer}
           </div>
         </div>
       );

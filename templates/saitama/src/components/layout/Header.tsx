@@ -40,6 +40,7 @@ export default block(
     );
   },
   {
+    title: "Header",
     argsType: {
       icon: {
         control: "input",
@@ -49,6 +50,7 @@ export default block(
         items: [
           {
             control: "map",
+            title: (props: { name: string }) => <>{props.name} </>,
             keys: {
               name: { control: "input" },
               href: { control: "input" },
@@ -61,10 +63,17 @@ export default block(
         items: [
           {
             control: "map",
+            title: (props: { icon: string }) => (
+              <div className={props.icon} />
+            ),
             keys: {
               icon: {
                 control: "select",
-                variants: [{ value: "i-fa-brands:twitter", title: "Twitter" }],
+                variants: [
+                  { value: "i-fa-brands:twitter", title: "Twitter" },
+                  { value: "i-fa-brands:telegram", title: "Telegram" },
+                  { value: "i-fa-brands:discord", title: "Discord" },
+                ],
               },
               href: { control: "input" },
             },
