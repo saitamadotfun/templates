@@ -19,28 +19,18 @@ const interTight = Inter_Tight({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata | undefined> {
   const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
   const site = await api.site
     .retrieve(siteId)
-    .then(({ data }) => data)
-    .catch(() => null);
-  if (site)
-    return {
-      icons: [site.metadata?.settings?.favicon?.uri],
-      openGraph: {
-        images: [site.metadata?.settings?.socialPreview?.uri],
-      },
-      title: site.metadata?.title,
-      description: site.metadata?.description,
-    };
+    .then(({ data }) => data);
   return {
+    icons: [site.metadata?.settings?.favicon?.uri],
     openGraph: {
-      images: ["https://ik.imagekit.io/orgk45qhh/banner.png"],
+      images: [site.metadata?.settings?.socialPreview?.uri],
     },
-    title: "Zeroboost | Deposit Anything to Trade Everything",
-    description:
-      "Speculate on Rising & Falling of Majors and Memes. Stake in different strategies to outperform market situations.",
+    title: site.metadata?.title,
+    description: site.metadata?.description,
   };
 }
 

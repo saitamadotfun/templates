@@ -2,7 +2,7 @@
   "HomePage": {
     "Header": {
       "logo": {
-        "uri": "",
+        "uri": "/ic_zeroboost.svg",
         "metadata": {
           "alt": "Zeroboost"
         }
