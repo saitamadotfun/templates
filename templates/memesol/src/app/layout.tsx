@@ -3,6 +3,7 @@ import "@unocss/reset/tailwind.css";
 
 import clsx from "clsx";
 import { Api } from "saitamadotfun/sdk";
+import { ToastContainer } from "react-toastify";
 
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
@@ -50,6 +51,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <ToastContainer />
       </body>
     </html>
   );

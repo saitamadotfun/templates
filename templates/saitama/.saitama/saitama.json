@@ -162,8 +162,8 @@
         ]
       },
       "legal": {
-        "title": "ALL RIGHTS RESERVED, 2025",
-        "detail": "WE WANT THIS PROJECT TO SUCCEED AND BECOME THE TOP MEME COIN ON COINMARKETCAP, AND WE WILL DO EVERYTHING IN OUR POWER TO ACHIEVE THIS. HOWEVER, REMEMBER THE RISKS AND ALWAYS TAKE RESPONSIBILITY FOR THEM. IT IS IMPORTANT TO THINK FOR YOURSELF."
+        "title": "All rights reserved, {date}",
+        "detail": "We want this project to succeed and become the top meme coin on coinmarketcap, and we will do everything in our power to achieve this. however, remember the risks and always take responsibility for them. it is important to think for yourself."
       }
     },
     "Config": {

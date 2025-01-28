@@ -1,0 +1,28 @@
+@import "saitamadotfun/bunshi/index.css";
+
+@unocss preflights;
+@unocss default;
+@unocss;
+
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+@font-face {
+  font-family: "Bold Marker";
+  src: url(../assets/fonts/Bold-Marker.otf);
+}
+
+@screen lt-md {
+  .custom-text {
+    @apply editor:tablet:!text-[calc(100vw-220px)] editor:phone:!text-[calc(100vw-340px)];
+  }
+}
+
+@screen md {
+  .custom-text {
+    @apply editor:tablet:!text-[calc(16vw)] editor:phone:!text-[calc(13vw)];
+  }
+}

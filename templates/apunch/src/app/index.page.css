@@ -1,0 +1,7 @@
+body {
+  @apply flex flex-col space-y-8 font-inter-tight font-normal text-sm md:text-base md:space-y-24 dark:bg-black dark:text-white;
+}
+
+.text-infinity {
+  font-size: 320px;
+}

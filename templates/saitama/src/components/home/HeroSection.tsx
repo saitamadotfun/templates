@@ -29,7 +29,7 @@ export default block(
               height={712}
               className="absolute bottom-0 z-10"
             />
-            <h1 className="absolute bottom-32 font-bold-marker  !text-[25vw] font-black uppercase font-bold-marker text-shadow-[0_10px_var(--primary-default)] text-shadow-color-primary -z-10 tablet:bottom-48 custom-text">
+            <h1 className="absolute bottom-32 font-bold-marker  !text-[25vw] font-black uppercase font-bold-marker text-shadow-[0_10px_var(--primary-default)] text-shadow-color-primary -z-10 custom-text tablet:bottom-48">
               {tagText}
             </h1>
           </div>

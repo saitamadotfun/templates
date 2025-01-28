@@ -1,0 +1,182 @@
+{
+  "HomePage": {
+    "HeroSection": {
+      "header": {
+        "icon": "Saitama",
+        "navigations": [
+          {
+            "name": "About",
+            "href": "#about"
+          },
+          {
+            "name": "How to buy",
+            "href": "#how-to-buy"
+          }
+        ],
+        "socials": [
+          {
+            "icon": "i-fa-brands:twitter",
+            "href": ""
+          },
+          {
+            "icon": "i-fa-brands:telegram",
+            "href": ""
+          }
+        ]
+      },
+      "backgroundImage": {
+        "uri": "/hero_section_bg.png",
+        "metadata": {
+          "alt": "Background"
+        }
+      },
+      "tagText": "Saitama",
+      "character": {
+        "uri": "/il_saitama.png",
+        "metadata": {
+          "alt": "Saitama"
+        }
+      },
+      "purchase": {
+        "ca": "CA: TBk4dXtfo6j3rxPc1VJDhA7BsVi2XHK1bi",
+        "dexes": [
+          {
+            "icon": {
+              "uri": "/ic_dexscreener.png",
+              "metadata": {
+                "alt": "DexScreener"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_dextools.png",
+              "metadata": {
+                "alt": "DexTools"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coinmarketcap.png",
+              "metadata": {
+                "alt": "CoinMarketcap"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coingecko.png",
+              "metadata": {
+                "alt": "Coin gecko"
+              }
+            },
+            "href": ""
+          }
+        ]
+      }
+    },
+    "HeroDisplay": {
+      "title": "In a punch",
+      "description": "Saitama is the main protagonist of the anime and manga series        One Punch Man, created by ONE. He is a hero who can defeat any         opponent with a single punch, leading to a lack of challenge and        excitement in his life. Known for his unassuming bald appearance         and simple personality, Saitama began his hero journey as a hobby         after intense training that left him overwhelmingly strong. Despite        his unmatched power, he remains humble, often struggling to gain         recognition in the Hero Association. His character blends humor,         satire, and action, making him a unique and beloved figure in modern anime.",
+      "illustration": {
+        "uri": "/il_satama_stand.png",
+        "metadata": {
+          "alt": "Sataima"
+        }
+      },
+      "action": {
+        "name": "Buy now",
+        "href": ""
+      }
+    },
+    "HowToBuy": {
+      "icon": {
+        "uri": "/il_saitama_suprised.png",
+        "metadata": {
+          "alt": "Saitama Suprised"
+        }
+      },
+      "steps": [
+        {
+          "title": "Create a Wallet",
+          "description": "Download a Solana wallet. We recommend Phantom or Solflare. These can be downloaded from the app store or as Chrome extensions for desktop users."
+        },
+        {
+          "title": "Add Solana",
+          "description": "Add SOL to your wallet. You can do this by purchasing SOL from a trusted exchange and transferring it to your wallet address."
+        },
+        {
+          "title": "Swap SOL for SAT",
+          "description": "Use a decentralized exchange to swap your SOL tokens for SAT tokens."
+        },
+        {
+          "title": "Welcome to SAT",
+          "description": "You now own TARD tokens. Enjoy the benefits!"
+        }
+      ]
+    },
+    "Footer": {
+      "ctaText": "Buy Now",
+      "purchase": {
+        "dexes": [
+          {
+            "icon": {
+              "uri": "/ic_dexscreener.png",
+              "metadata": {
+                "alt": "DexScreener"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_dextools.png",
+              "metadata": {
+                "alt": "DexTools"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coinmarketcap.png",
+              "metadata": {
+                "alt": "CoinMarketcap"
+              }
+            },
+            "href": ""
+          },
+          {
+            "icon": {
+              "uri": "/ic_coingecko.png",
+              "metadata": {
+                "alt": "Coin gecko"
+              }
+            },
+            "href": ""
+          }
+        ]
+      },
+      "legal": {
+        "title": "All rights reserved, {date}",
+        "detail": "We want this project to succeed and become the top meme coin on coinmarketcap, and we will do everything in our power to achieve this. however, remember the risks and always take responsibility for them. it is important to think for yourself."
+      }
+    },
+    "Config": {
+      "theme": {
+        "primary": {
+          "default": "#FFCA00",
+          "alpha": "#FFF6D6"
+        },
+        "inverse": {
+          "default": "#FFF9E4",
+          "alpha": "#FFFFFF"
+        }
+      }
+    }
+  }
+}

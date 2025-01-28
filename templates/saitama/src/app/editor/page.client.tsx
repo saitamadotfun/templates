@@ -4,7 +4,7 @@ import { Api, Asset } from "saitamadotfun/sdk";
 import { Editor, toPlainObject } from "saitamadotfun/bunshi";
 
 import { redirect } from "next/navigation"; 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 
 import { layers } from "@/layers";
@@ -21,8 +21,6 @@ export function EditorPageClient({ assets: $assets }: { assets: Asset[] }) {
       ),
     [cookies]
   );
-
-  useEffect(() => {}, [api]);
 
   return (
     <Editor
