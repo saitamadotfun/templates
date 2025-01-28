@@ -1,4 +1,5 @@
 "use server";
+"use action";
 
 import { XiorError } from "xior";
 import { Api } from "saitamadotfun/sdk";
