@@ -20,18 +20,18 @@ const helvetica = LocalFont({
   variable: "--font-helvetica",
 });
 
-export async function generateMetadata(): Promise<Metadata | undefined> {
-  const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
-  const site = await api.site.retrieve(siteId).then(({ data }) => data);
-  return {
-    icons: [site.metadata?.settings?.favicon?.uri],
-    openGraph: {
-      images: [site.metadata?.settings?.socialPreview?.uri],
-    },
-    title: site.metadata?.title,
-    description: site.metadata?.description,
-  };
-}
+// export async function generateMetadata(): Promise<Metadata | undefined> {
+//   const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
+//   const site = await api.site.retrieve(siteId).then(({ data }) => data);
+//   return {
+//     icons: [site.metadata?.settings?.favicon?.uri],
+//     openGraph: {
+//       images: [site.metadata?.settings?.socialPreview?.uri],
+//     },
+//     title: site.metadata?.title,
+//     description: site.metadata?.description,
+//   };
+// }
 
 export default function RootLayout({
   children,

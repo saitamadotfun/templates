@@ -14,14 +14,15 @@ export default block(
         />
         <div className="self-center size-sm absolute bg-gradient-to-b from-primary-alpha-10 via-primary-alpha-50 blur-3xl rounded-full" />
         <div className="max-w-2xl m-auto flex-1 flex flex-col items-center justify-center space-y-8 phone:px-8">
-          <div className="flex flex-col space-y-2 text-center">
+          <div className="flex flex-col space-y-2 md:text-center">
             <h1
-              className="text-6xl font-helvetica font-bold"
+              className="text-gradient-primary text-6xl font-bold phone:text-4xl phone:font-extrabold tablet:font-helvetica"
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <p className="text-lg text-white/75">{description}</p>
+            <p className="text-base text-white/75 tablet:text-lg">{description}</p>
           </div>
-          <div className="flex items-center justify-center space-x-4">
+          <div className="flex items-center space-x-4 lt-md:self-start tablet:justify-center">
+            <button className="btn bg-gradient-to-r from-primary-alpha-50 to-primary-alpha-25 px-4 py-3 rounded-md">Schedue a free call today</button>
             {socials.map((social, index) => (
               <Link
                 key={index}

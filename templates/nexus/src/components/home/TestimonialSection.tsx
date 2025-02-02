@@ -10,7 +10,7 @@ export default block(
           <div
             key={index}
             className={clsx(
-              "flex flex-col space-y-2 bg-gradient-to-r from-primary-alpha-25 via-primary-alpha-25 via-primary-alpha-10 p-8 text-lg rounded-md",
+              "flex flex-col space-y-2 bg-gradient-to-r from-primary-alpha-25 via-primary-alpha-25 via-primary-alpha-10 p-8 text-base rounded-md tablet:text-lg",
               index === 0 ? "col-span-4" : "col-span-4 tablet:col-span-2"
             )}
           >

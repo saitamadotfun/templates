@@ -20,7 +20,7 @@ export default block(
               )}
             >
               <h1 className="text-xl">{service.title}</h1>
-              <p className="text-lg text-white/75">{service.description}</p>
+              <p className="text-base text-white/75 tablet:text-lg">{service.description}</p>
             </div>
           ))}
         </div>

@@ -20,7 +20,6 @@ export default block(
             className="btn btn-primary space-x-2 rounded-md"
           >
             <span>{action.name}</span>
-            <MdArrowOutward />
           </Link>
         </div>
       </section>
@@ -40,7 +39,7 @@ export default block(
       },
     },
     args: {
-      title: "Ready to transform your product?",
+      title: "Ready to transform your project?",
       subtitle: "Let's work together to achieve your digital goals.",
       action: {
         name: "Contact us",
