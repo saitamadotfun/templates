@@ -38,7 +38,7 @@ export default defineConfig({
     "text-gradient-primary":
       "bg-gradient-to-r from-black to-black/10 text-transparent bg-clip-text dark:from-white dark:to-white/10 ",
   },
-  presets: [presetUno({ dark: "media" }), presetIcons()],
+  presets: [presetUno({ dark: "class" }), presetIcons()],
   theme: {
     colors: {
       primary: {
