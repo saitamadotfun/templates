@@ -2,6 +2,16 @@
   "HomePage": {
     "HeroSection": {
       "header": {
+        "icon": {
+          "uri": "",
+          "metadata": {
+            "alt": ""
+          }
+        },
+        "action": {
+          "name": "Join community",
+          "href": "https://t.me/nexusportal01"
+        },
         "navigations": [
           {
             "name": "Home",
@@ -26,11 +36,13 @@
       "socials": [
         {
           "icon": "i-fa-brands:twitter",
-          "href": ""
+          "name": "Twitter",
+          "link": "https://x.com/nexus_builder"
         },
         {
           "icon": "i-fa-brands:telegram-plane",
-          "href": ""
+          "name": "Telegram",
+          "link": "https://t.me/nexusportal01"
         }
       ]
     },
@@ -95,20 +107,27 @@
         }
       ]
     },
-    "ContactSection": {},
     "Footer": {
+      "contact": {
+        "title": "Ready to transform your product?",
+        "subtitle": "Let's work together to achieve your digital goals.",
+        "action": {
+          "name": "Contact us",
+          "href": "https://t.me/nexusportal01"
+        }
+      },
       "legal": "© 2024 Nexus Builder Ltd. All rights reserved.",
       "disclaimer": "Trading digital currency entails significant risk and is not            appropriate for all users. Digital currency values are not static            and fluctuate due to market changes. Nexus Builder does not provide financial            advice or accept liability for any loss or damages. For more information, please see the",
       "socials": [
         {
           "icon": "i-fa-brands:telegram-plane",
           "name": "Telegram",
-          "link": ""
+          "link": "https://t.me/nexusportal01"
         },
         {
           "icon": "i-fa-brands:twitter",
           "name": "Twitter",
-          "link": ""
+          "link": "https://x.com/nexus_builder"
         }
       ],
       "links": [

@@ -5,13 +5,13 @@ import { block } from "saitamadotfun/bunshi";
 export default block(
   function TestimonialSection({ testimonies }) {
     return (
-      <section className="grid grid-cols-4 gap-4 px-4 md:px-8">
+      <section className="grid grid-cols-4 gap-4 px-4 tablet:px-8">
         {testimonies.map((testimony, index) => (
           <div
             key={index}
             className={clsx(
               "flex flex-col space-y-2 bg-gradient-to-r from-primary-alpha-25 via-primary-alpha-25 via-primary-alpha-10 p-8 text-lg rounded-md",
-              index === 0 ? "col-span-4" : "col-span-4 md:col-span-2"
+              index === 0 ? "col-span-4" : "col-span-4 tablet:col-span-2"
             )}
           >
             <div className="flex space-x-4">
@@ -24,7 +24,7 @@ export default block(
               />
               <div className="flex flex-col">
                 <p>{testimony.name}</p>
-                <small className="text-xs text-white/75 md:text-sm">
+                <small className="text-xs text-white/75 tablet:text-sm">
                   {testimony.username}
                 </small>
               </div>
@@ -45,6 +45,7 @@ export default block(
         items: [
           {
             control: "map",
+            title: (props: { name: string }) => props.name,
             keys: {
               avatar: { control: "asset" },
               name: { control: "input" },

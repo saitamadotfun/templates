@@ -13,19 +13,19 @@ export default block(
           className="sticky top-0"
         />
         <div className="self-center size-sm absolute bg-gradient-to-b from-primary-alpha-10 via-primary-alpha-50 blur-3xl rounded-full" />
-        <div className="max-w-2xl m-auto flex-1 flex flex-col items-center justify-center space-y-8 lt-md:px-8">
+        <div className="max-w-2xl m-auto flex-1 flex flex-col items-center justify-center space-y-8 phone:px-8">
           <div className="flex flex-col space-y-2 text-center">
             <h1
               className="text-6xl font-helvetica font-bold"
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <p className="text-white/75">{description}</p>
+            <p className="text-lg text-white/75">{description}</p>
           </div>
           <div className="flex items-center justify-center space-x-4">
             {socials.map((social, index) => (
               <Link
                 key={index}
-                href={social.href}
+                href={social.link}
                 target="_blank"
                 className="size-10 flex items-center justify-center border border-primary-alpha-50 text-white/50 rounded-md cursor-pointer hover:border-primary hover:text-white hover:border-primary"
               >
@@ -51,17 +51,35 @@ export default block(
         items: [
           {
             control: "map",
+            title: (props: { icon: string; name: string }) => (
+              <div className="flex items-center space-x-2">
+                <div className={props.icon} />
+                <span>{props.name}</span>
+              </div>
+            ),
             keys: {
               icon: {
                 control: "select",
                 variants: [
                   { title: "Twitter", value: "i-fa-brands:twitter" },
-                  { title: "Discorc", value: "i-fa-brands:discord" },
-                  { title: "Telegram", value: "i-fa-brands:telegram-plane" },
-                  { title: "Reddit", value: "i-fa-brands:reddit-alien" },
+                  { title: "Instagram", value: "i-fa-brands:instagram" },
+                  { title: "TikTok", value: "i-fa-brands:tiktok" },
+                  {
+                    title: "Facebook",
+                    value: "i-fa-brands:facebook",
+                  },
+                  {
+                    title: "Telegram",
+                    value: "i-fa-brands:telegram",
+                  },
+                  { title: "Reddit", value: "i-fa-brands:reddit" },
+                  { title: "Tumblr", value: "i-fa-brands:tumblr" },
                 ],
               },
-              href: { control: "input", description: "Social link" },
+              name: {
+                control: "input",
+              },
+              link: { control: "input" },
             },
           },
         ],
@@ -76,11 +94,13 @@ export default block(
       socials: [
         {
           icon: "i-fa-brands:twitter",
-          href: "",
+          name: "Twitter",
+          link: "https://x.com/nexus_builder",
         },
         {
           icon: "i-fa-brands:telegram-plane",
-          href: "",
+          name: "Telegram",
+          link: "https://t.me/nexusportal01",
         },
       ],
     },

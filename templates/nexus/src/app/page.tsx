@@ -6,7 +6,6 @@ import HeroSection from "@/components/home/HeroSection";
 
 import { getProps } from "@/actions/saveProps";
 import ServiceSection from "@/components/home/ServiceSection";
-import ContactSection from "@/components/home/ContactSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
 
 export default async function HomePage() {
@@ -18,7 +17,6 @@ export default async function HomePage() {
         <HeroSection {...props.HomePage.HeroSection} />
         <ServiceSection {...props.HomePage.ServiceSection} />
         <TestimonialSection {...props.HomePage.TestimonialSection} />
-        <ContactSection {...props.HomePage.ContactSection} />
         <Footer {...props.HomePage.Footer} />
       </div>
       <Config {...props.HomePage.Config} />

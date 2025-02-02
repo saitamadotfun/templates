@@ -4,17 +4,19 @@ import { block } from "saitamadotfun/bunshi";
 export default block(
   function ServiceSection({ services }) {
     return (
-      <section className="flex flex-col space-y-4 px-4 md:px-8">
+      <section className="flex flex-col space-y-4 px-4 tablet:px-8">
         <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-white/75 via-white/50 to-white/5">
           Our Services
         </h1>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 tablet:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}
               className={clsx(
-                "flex flex-col space-y-2 bg-gradient-to-b from-primary-alpha-25 to-green-950/10 border border-primary-alpha-10 p-4 rounded-md md:space-y-4",
-                index === Math.floor((services.length - 2) / 2) ? "md:row-span-3 lt-md:h-xs" : "h-xs"
+                "flex flex-col space-y-2 bg-gradient-to-b from-primary-alpha-25 to-green-950/10 border border-primary-alpha-10 p-4 rounded-md tablet:space-y-4",
+                index === Math.floor((services.length - 2) / 2)
+                  ? "tablet:row-span-3 phone:h-xs"
+                  : "h-xs"
               )}
             >
               <h1 className="text-xl">{service.title}</h1>
@@ -33,6 +35,7 @@ export default block(
         items: [
           {
             control: "map",
+            title: (props: { title: string }) => props.title,
             keys: {
               title: { control: "input" },
               description: { control: "input", inputType: "textarea" },

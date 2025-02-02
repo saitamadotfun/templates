@@ -5,7 +5,6 @@ import Config from "./components/Config";
 import Footer from "./components/layout/Footer";
 import HeroSection from "./components/home/HeroSection";
 import ServiceSection from "./components/home/ServiceSection";
-import ContactSection from "./components/home/ContactSection";
 import TestimonialSection from "./components/home/TestimonialSection";
 
 export const layers = [
@@ -13,7 +12,7 @@ export const layers = [
     ({ children, className }) => (
       <div
         className={clsx(
-          "flex flex-col space-y-8 font-inter-tight font-normal bg-black text-white text-sm md:text-base md:space-y-24",
+          "flex flex-col space-y-8 font-normal bg-black text-white text-sm md:text-base md:space-y-24",
           className
         )}
       >
@@ -26,7 +25,6 @@ export const layers = [
         HeroSection,
         ServiceSection,
         TestimonialSection,
-        ContactSection,
         Footer,
         Config,
       ],

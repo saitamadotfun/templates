@@ -2,6 +2,7 @@
 
 import clsx from "clsx";
 import Link from "next/link";
+import Image from "next/image";
 import { useClickAway } from "react-use";
 import { useRef, useState } from "react";
 import { block } from "saitamadotfun/bunshi";
@@ -11,7 +12,7 @@ import { MdArrowOutward, MdMenu } from "react-icons/md";
 import IcLogo from "../IcLogo";
 
 const Block = block(
-  function Header({ navigations }) {
+  function Header({ icon, navigations, action }) {
     const pathname = usePathname();
 
     const [show, setShow] = useState(false);
@@ -22,19 +23,28 @@ const Block = block(
     return (
       <div className="relative flex items-center px-4 py-2">
         <div>
-          <IcLogo
-            width={48}
-            heigth={48}
-            className="lt-md:size-10"
-          />
+          {icon && icon.uri ? (
+            <Image
+              src={icon.uri}
+              width={48}
+              height={48}
+              alt={icon.metadata?.alt}
+            />
+          ) : (
+            <IcLogo
+              width={48}
+              heigth={48}
+              className="phone:size-10"
+            />
+          )}
         </div>
         <div
           ref={navigationElement}
           className={clsx(
-            "flex-1 flex  md:items-center md:justify-center",
+            "flex-1 flex tablet:items-center tablet:justify-center",
             show
-              ? "lt-md:min-w-40 lt-md:absolute lt-md:-bottom-42 lt-md:right-0 lt-md:flex-col lt-md:bg-black lt-md:py-4"
-              : "lt-md:hidden"
+              ? "phone:min-w-40 phone:absolute phone:-bottom-42 phone:right-0 phone:flex-col phone:bg-black phone:py-4"
+              : "phone:hidden"
           )}
         >
           {navigations.map((navigation, index) => {
@@ -45,10 +55,10 @@ const Block = block(
                 key={index}
                 href={navigation.href}
                 className={clsx(
-                  "py-2 lt-md:px-4",
+                  "py-2 phone:px-4",
                   isActive
-                    ? "text-white md:border-b-2 md:border-white md:px-2"
-                    : "text-white/75 hover:text-white/90 md:px-4"
+                    ? "text-white tablet:border-b-2 tablet:border-white tablet:px-2"
+                    : "text-white/75 hover:text-white/90 tablet:px-4"
                 )}
               >
                 {navigation.name}
@@ -56,17 +66,17 @@ const Block = block(
             );
           })}
         </div>
-        <div className="flex items-center space-x-4 lt-md:flex-1 lt-md:justify-end">
+        <div className="flex items-center space-x-4 phone:flex-1 phone:justify-end">
           <Link
-            href=""
+            href={action.href}
             target="_blank"
             className="btn btn-primary space-x-2 rounded-md"
           >
-            <span>Join Community</span>
+            <span>{action.name}</span>
             <MdArrowOutward />
           </Link>
           <button
-            className="py-2 md:hidden"
+            className="py-2 tablet:hidden"
             onClick={() => setShow(!show)}
           >
             <MdMenu className="text-xl" />
@@ -77,11 +87,13 @@ const Block = block(
   },
   {
     argsType: {
+      icon: { control: "asset" },
       navigations: {
         control: "list",
         items: [
           {
             control: "map",
+            title: (props: { name: string }) => props.name,
             keys: {
               name: { control: "input" },
               href: { control: "input", description: "Navigation link" },
@@ -89,8 +101,20 @@ const Block = block(
           },
         ],
       },
+      action: {
+        control: "map",
+        keys: {
+          name: { control: "input" },
+          href: { control: "input" },
+        },
+      },
     },
     args: {
+      icon: { uri: "", metadata: { alt: "" } },
+      action: {
+        name: "Join community",
+        href: "https://t.me/nexusportal01",
+      },
       navigations: [
         {
           name: "Home",
