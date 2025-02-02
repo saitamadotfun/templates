@@ -1,0 +1,3 @@
+body {
+  @apply font-[var(--font-geist-sans)] dark:bg-black dark:text-white;
+}

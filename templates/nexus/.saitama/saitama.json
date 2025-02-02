@@ -1,0 +1,143 @@
+{
+  "HomePage": {
+    "HeroSection": {
+      "header": {
+        "navigations": [
+          {
+            "name": "Home",
+            "href": "/"
+          },
+          {
+            "name": "About us",
+            "href": "#about-us"
+          },
+          {
+            "name": "Projects",
+            "href": "#projects"
+          },
+          {
+            "name": "Contacts",
+            "href": "#contacts"
+          }
+        ]
+      },
+      "title": "Best Solution <br /> for your project",
+      "description": "Join over dozens of teams who trust us for decentralized branding,      community engagement, DAO governance, and strategic web3 growth.",
+      "socials": [
+        {
+          "icon": "i-fa-brands:twitter",
+          "href": ""
+        },
+        {
+          "icon": "i-fa-brands:telegram-plane",
+          "href": ""
+        }
+      ]
+    },
+    "ServiceSection": {
+      "services": [
+        {
+          "title": "Branding",
+          "description": "Utilizing Web3 tools like decentralized social media platforms, Discord, and Telegram to build and manage engaged communities. Hereby helping brands build an authentic, transparent, and community-driven identity in the Web3 spaces."
+        },
+        {
+          "title": "Community Building & Engagement",
+          "description": "Creating community ambassador programs that empower passionate users to spread the brand’s message and then designing a reward systems through tokens or  NFTs to incentivize user interaction and loyalty."
+        },
+        {
+          "title": "Storytelling & Content Creation",
+          "description": "Crafting compelling, Web3 specific brand stories that resonate with decentralized audiences and align with blockchain values and then distributing the contents tailored for Web3 platforms, including blogs, podcasts, videos, and social media & decentralized communities."
+        },
+        {
+          "title": "Influencer Campaigns",
+          "description": "Identifying and partnering with influencers who specialize in blockchain, crypto, NFTs, and decentralized technologies. & then lunching a cobranded initiatives with these Web3 centric influencers, creators, or other blockchain-based projects."
+        },
+        {
+          "title": "Partnerships & Collaborations",
+          "description": "Facilitating partnerships between brands and other Web3 projects, Helping the brand integrate into existing Web3 ecosystems"
+        }
+      ]
+    },
+    "TestimonialSection": {
+      "testimonies": [
+        {
+          "name": "Onisaibogu",
+          "username": "@onisaibogu",
+          "avatar": {
+            "uri": "/ic_onisaibogu.jpg",
+            "metadata": {
+              "alt": "Onisabogu"
+            }
+          },
+          "testimony": "Being part of this Web3 community has been a game changer! The engagement, governance, and rewards make it truly decentralized and rewarding."
+        },
+        {
+          "name": "ZeroBoost",
+          "username": "@zer0boost",
+          "avatar": {
+            "uri": "/ic_zeroboost.jpg",
+            "metadata": {
+              "alt": "Onisabogu"
+            }
+          },
+          "testimony": "ZeroBoost has taken community-driven DeFi to the next level with this service! From governance to engaging campaigns, our Web3 community is stronger and more active than ever. The perfect partner for decentralized growth."
+        },
+        {
+          "name": "Saitama",
+          "username": "@saitamadotfun",
+          "avatar": {
+            "uri": "/ic_saitama.jpg",
+            "metadata": {
+              "alt": "Onisabogu"
+            }
+          },
+          "testimony": "saitama.fun community has grown stronger than ever thanks to this service! Engaging campaigns, strategic partnerships, and authentic Web3 storytelling have helped us connect with the right audience. Highly recommended!"
+        }
+      ]
+    },
+    "ContactSection": {},
+    "Footer": {
+      "legal": "© 2024 Nexus Builder Ltd. All rights reserved.",
+      "disclaimer": "Trading digital currency entails significant risk and is not            appropriate for all users. Digital currency values are not static            and fluctuate due to market changes. Nexus Builder does not provide financial            advice or accept liability for any loss or damages. For more information, please see the",
+      "socials": [
+        {
+          "icon": "i-fa-brands:telegram-plane",
+          "name": "Telegram",
+          "link": ""
+        },
+        {
+          "icon": "i-fa-brands:twitter",
+          "name": "Twitter",
+          "link": ""
+        }
+      ],
+      "links": [
+        {
+          "name": "Terms",
+          "href": ""
+        },
+        {
+          "name": "Privacy",
+          "href": ""
+        }
+      ]
+    },
+    "Config": {
+      "theme": {
+        "primary": {
+          "default": "#5CA47A",
+          "alpha10": "rgba(92,164,122,0.1)",
+          "alpha25": "rgba(92,164,122,0.25)",
+          "alpha50": "rgba(92,164,122,0.5)",
+          "alpha75": "rgba(92,164,122,0.75)"
+        },
+        "secondary": {
+          "default": "#201E1E"
+        },
+        "inverse": {
+          "default": "#FFFFFF"
+        }
+      }
+    }
+  }
+}

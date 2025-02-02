@@ -20,8 +20,8 @@ const interTight = Inter_Tight({
   subsets: ["latin"],
 });
 
-const boldMarker = LocalFont({
-  src: "../assets/fonts/Bold-Marker.otf",
+const austere = LocalFont({
+  src: "../assets/fonts/Austere.ttf",
   variable: "--font-bold-marker",
 });
 
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(inter.variable, interTight.variable, boldMarker.variable)}
+      className={clsx(inter.variable, interTight.variable, austere.variable)}
     >
       <body className="flex flex-col overflow-x-hidden">{children}</body>
     </html>

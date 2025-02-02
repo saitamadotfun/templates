@@ -11,8 +11,8 @@
 }
 
 @font-face {
-  font-family: "Bold Marker";
-  src: url(../assets/fonts/Bold-Marker.otf);
+  font-family: "Austere";
+  src: url(../assets/fonts/Austere.ttf.otf);
 }
 
 @screen lt-md {
