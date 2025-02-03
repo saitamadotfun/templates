@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { MdArrowOutward } from "react-icons/md";
 import { block } from "saitamadotfun/bunshi";
 
 export default block(
@@ -9,8 +8,8 @@ export default block(
         id="contacts"
         className="relative flex px-4 phone:flex-col phone:space-y-4 tablet:px-8"
       >
-        <div className="flex-1 flex flex-col space-y-2">
-          <h1 className="text-5xl font-extrabold">{title}</h1>
+        <div className="flex-1 flex flex-col md:space-y-2">
+          <h1 className="text-3xl font-extrabold md:text-4xl">{title}</h1>
           <p className="text-lg text-white/75">{subtitle}</p>
         </div>
         <div className="flex-1 flex items-center tablet:justify-end">
@@ -42,8 +41,8 @@ export default block(
       title: "Ready to transform your project?",
       subtitle: "Let's work together to achieve your digital goals.",
       action: {
-        name: "Contact us",
-        href: "https://t.me/nexusportal01",
+        name: "Email us",
+        href: "mailto:contact@nexusbuilder.xyz",
       },
     },
   }

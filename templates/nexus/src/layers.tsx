@@ -4,6 +4,7 @@ import { layer } from "saitamadotfun/bunshi";
 import Config from "./components/Config";
 import Footer from "./components/layout/Footer";
 import HeroSection from "./components/home/HeroSection";
+import ContactDialog from "./components/home/ContactDialog";
 import ServiceSection from "./components/home/ServiceSection";
 import TestimonialSection from "./components/home/TestimonialSection";
 
@@ -26,6 +27,7 @@ export const layers = [
         ServiceSection,
         TestimonialSection,
         Footer,
+        ContactDialog,
         Config,
       ],
     }

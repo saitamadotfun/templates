@@ -9,6 +9,7 @@ import { Geist } from "next/font/google";
 
 import "./globals.css";
 import { saitamaBaseApiUrl, saitamaApiKey, siteId } from "@/config";
+import Provider from "@/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +48,9 @@ export default function RootLayout({
         "dark antialiased text-sm md:text-base"
       )}
     >
-      <body className="flex flex-col overflow-x-hidden">{children}</body>
+      <body className="flex flex-col overflow-x-hidden">
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }

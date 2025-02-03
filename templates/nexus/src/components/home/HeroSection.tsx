@@ -1,11 +1,15 @@
+"use client";
 import clsx from "clsx";
 import Link from "next/link";
 import { block } from "saitamadotfun/bunshi";
+import { useGlobalState } from "@/providers/GlobalStateProvider";
 
 import Header from "../layout/Header";
 
 export default block(
   function HeroSection({ header, title, description, socials }) {
+    const { setShowContactDialog } = useGlobalState();
+
     return (
       <div className="relative h-xl flex flex-col justify-center space-y-8  to-black">
         <Header
@@ -19,10 +23,17 @@ export default block(
               className="text-gradient-primary text-6xl font-bold phone:text-4xl phone:font-extrabold tablet:font-helvetica"
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <p className="text-base text-white/75 tablet:text-lg">{description}</p>
+            <p className="text-base text-white/75 tablet:text-lg">
+              {description}
+            </p>
           </div>
           <div className="flex items-center space-x-4 lt-md:self-start tablet:justify-center">
-            <button className="btn bg-gradient-to-r from-primary-alpha-50 to-primary-alpha-25 px-4 py-3 rounded-md">Schedue a free call today</button>
+            <button
+              className="btn bg-gradient-to-r from-primary-alpha-50 to-primary-alpha-25 px-4 py-3 rounded-md"
+              onClick={() => setShowContactDialog(true)}
+            >
+              Schedue a free call today
+            </button>
             {socials.map((social, index) => (
               <Link
                 key={index}

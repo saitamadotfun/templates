@@ -20,7 +20,9 @@ export default block(
               )}
             >
               <h1 className="text-xl">{service.title}</h1>
-              <p className="text-base text-white/75 tablet:text-lg">{service.description}</p>
+              <p className="text-base text-white/75 tablet:text-lg">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
@@ -65,6 +67,11 @@ export default block(
           title: "Influencer Campaigns",
           description:
             "Identifying and partnering with influencers who specialize in blockchain, crypto, NFTs, and decentralized technologies. & then lunching a cobranded initiatives with these Web3 centric influencers, creators, or other blockchain-based projects.",
+        },
+        {
+          title: "DAO Strategy & Governance",
+          description:
+            "Assisting brands in setting up DAOs to decentralize decision-making and empower community members. And designing governance models that allow token holders to participate in decision-making processes.",
         },
         {
           title: "Partnerships & Collaborations",

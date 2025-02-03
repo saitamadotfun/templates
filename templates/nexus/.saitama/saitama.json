@@ -65,6 +65,10 @@
           "description": "Identifying and partnering with influencers who specialize in blockchain, crypto, NFTs, and decentralized technologies. & then lunching a cobranded initiatives with these Web3 centric influencers, creators, or other blockchain-based projects."
         },
         {
+          "title": "DAO Strategy & Governance",
+          "description": "Assisting brands in setting up DAOs to decentralize decision-making and empower community members. And designing governance models that allow token holders to participate in decision-making processes."
+        },
+        {
           "title": "Partnerships & Collaborations",
           "description": "Facilitating partnerships between brands and other Web3 projects, Helping the brand integrate into existing Web3 ecosystems"
         }
@@ -112,8 +116,8 @@
         "title": "Ready to transform your project?",
         "subtitle": "Let's work together to achieve your digital goals.",
         "action": {
-          "name": "Contact us",
-          "href": "https://t.me/nexusportal01"
+          "name": "Email us",
+          "href": "mailto:contact@nexusbuilder.xyz"
         }
       },
       "legal": "© 2024 Nexus Builder Ltd. All rights reserved.",
@@ -141,6 +145,7 @@
         }
       ]
     },
+    "ContactDialog": {},
     "Config": {
       "theme": {
         "primary": {

@@ -15,6 +15,7 @@
     "@next/polyfill-module": "^15.0.3",
     "@unocss/reset": "^0.64.0",
     "clsx": "^2.1.1",
+    "formik": "^2.4.6",
     "fs": "^0.0.1-security",
     "next": "15.1.6",
     "react": "^18.3.1",
@@ -25,7 +26,8 @@
     "react-toastify": "^10.0.6",
     "react-use": "^17.6.0",
     "sharp": "^0.33.5",
-    "xior": "^0.6.3"
+    "xior": "^0.6.3",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

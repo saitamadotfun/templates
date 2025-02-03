@@ -7,6 +7,7 @@ import HeroSection from "@/components/home/HeroSection";
 import { getProps } from "@/actions/saveProps";
 import ServiceSection from "@/components/home/ServiceSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
+import ContactDialog from "@/components/home/ContactDialog";
 
 export default async function HomePage() {
   const props = await getProps();
@@ -19,6 +20,7 @@ export default async function HomePage() {
         <TestimonialSection {...props.HomePage.TestimonialSection} />
         <Footer {...props.HomePage.Footer} />
       </div>
+      <ContactDialog {...props.HomePage.ContactDialog} />
       <Config {...props.HomePage.Config} />
     </>
   );
