@@ -10,7 +10,7 @@ const GlobalStateContext = createContext<Partial<GlobalStateContext>>({});
 export default function GlobalStateProvider({
   children,
 }: React.PropsWithChildren) {
-  const [showContactDialog, setShowContactDialog] = useState(true);
+  const [showContactDialog, setShowContactDialog] = useState(false);
   return (
     <GlobalStateContext.Provider
       value={{ setShowContactDialog, showContactDialog }}
