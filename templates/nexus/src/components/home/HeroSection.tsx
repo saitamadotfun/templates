@@ -32,7 +32,7 @@ export default block(
               className="btn bg-gradient-to-r from-primary-alpha-50 to-primary-alpha-25 px-4 py-3 rounded-md"
               onClick={() => setShowContactDialog(true)}
             >
-              Schedue a free call today
+              Schedule a free call today
             </button>
             {socials.map((social, index) => (
               <Link

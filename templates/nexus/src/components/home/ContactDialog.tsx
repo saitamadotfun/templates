@@ -11,7 +11,7 @@ import { useGlobalState } from "@/providers/GlobalStateProvider";
 import Input from "../Input";
 
 export default block(
-  function ContactDialog() {
+  function ContactDialog({ title }) {
     const { showContactDialog, setShowContactDialog } = useGlobalState();
 
     return (
@@ -23,9 +23,10 @@ export default block(
         <div className="fixed inset-0 flex flex-col">
           <DialogPanel className="m-auto flex flex-col w-sm bg-black/50 backdrop-blur-3xl text-white p-4 rounded-xl">
             <div className="flex items-center py-2">
-              <h1 className="flex-1 text-xl font-medium">
-                Your vision. Our Expertise <br /> Let's Start today!
-              </h1>
+              <h1
+                className="flex-1 text-xl font-medium"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
               <button
                 className="size-8 flex items-center justify-center bg-dark rounded-full"
                 onClick={() => setShowContactDialog(false)}
@@ -46,7 +47,7 @@ export default block(
                 phone: string().required(),
                 projectDescription: string().required(),
               })}
-              onSubmit={() => {}}
+              onSubmit={(values) => {}}
             >
               {({ isSubmitting }) => (
                 <Form className="flex flex-col space-y-4">
@@ -88,5 +89,15 @@ export default block(
       </Dialog>
     );
   },
-  { title: "ContactDialog", argsType: {}, args: {} }
+  {
+    title: "ContactDialog",
+    argsType: {
+      title: { control: "input" },
+      email: { control: "input" },
+    },
+    args: {
+      title: "Your vision. Our Expertise <br /> Let's Start today!",
+      email: "contact@nexusbuilder.xyz",
+    },
+  }
 );

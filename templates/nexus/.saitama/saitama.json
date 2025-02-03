@@ -145,7 +145,10 @@
         }
       ]
     },
-    "ContactDialog": {},
+    "ContactDialog": {
+      "title": "Your vision. Our Expertise <br /> Let's Start today!",
+      "email": "contact@nexusbuilder.xyz"
+    },
     "Config": {
       "theme": {
         "primary": {
