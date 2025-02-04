@@ -18,6 +18,7 @@ export default block(
       <Dialog
         open={showContactDialog}
         onClose={() => setShowContactDialog(false)}
+        className="relative z-50"
       >
         <DialogBackdrop className="fixed inset-0 bg-white/25 backdrop-blur-sm" />
         <div className="fixed inset-0 flex flex-col">

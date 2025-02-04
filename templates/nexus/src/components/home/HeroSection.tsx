@@ -16,8 +16,8 @@ export default block(
           {...header}
           className="sticky top-0"
         />
-        <div className="self-center size-sm absolute bg-gradient-to-b from-primary-alpha-10 via-primary-alpha-50 blur-3xl rounded-full" />
-        <div className="max-w-2xl m-auto flex-1 flex flex-col items-center justify-center space-y-8 phone:px-8">
+        <div className="self-center size-sm absolute bg-gradient-to-b from-primary-alpha-10 via-primary-alpha-50 blur-3xl rounded-full z-0" />
+        <div className="max-w-2xl m-auto flex-1 flex flex-col items-center justify-center space-y-8 z-20 phone:px-8">
           <div className="flex flex-col space-y-2 md:text-center">
             <h1
               className="text-gradient-primary text-6xl font-bold phone:text-4xl phone:font-extrabold tablet:font-helvetica"
