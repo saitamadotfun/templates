@@ -1,6 +1,7 @@
 "use client";
 import { block } from "saitamadotfun/bunshi";
 import { toCustomPropertiesString } from "object-to-css-variables";
+import FirebaseProvider from "@/providers/FirebaseProvider";
 
 export default block(
   function Config({ theme }) {
@@ -17,6 +18,7 @@ export default block(
   {
     title: "Config",
     argsType: {
+      firebase: { control: "map", keys: FirebaseProvider.argsType },
       theme: {
         control: "map",
         keys: {
@@ -50,6 +52,7 @@ export default block(
       },
     },
     args: {
+      firebase: FirebaseProvider.args,
       theme: {
         primary: {
           default: "#5CA47A",

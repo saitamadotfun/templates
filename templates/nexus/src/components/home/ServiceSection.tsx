@@ -4,7 +4,10 @@ import { block } from "saitamadotfun/bunshi";
 export default block(
   function ServiceSection({ services }) {
     return (
-      <section className="flex flex-col space-y-4 px-4 tablet:px-8">
+      <section
+        id="service"
+        className="flex flex-col space-y-4 px-4 z-10 tablet:px-8"
+      >
         <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-white/75 via-white/50 to-white/5">
           Our Services
         </h1>

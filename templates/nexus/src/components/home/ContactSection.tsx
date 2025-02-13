@@ -6,7 +6,7 @@ export default block(
     return (
       <section
         id="contacts"
-        className="relative flex px-4 phone:flex-col phone:space-y-4 tablet:px-8"
+        className="relative flex px-4 z-10 phone:flex-col phone:space-y-4 tablet:px-8"
       >
         <div className="flex-1 flex flex-col md:space-y-2">
           <h1 className="text-3xl font-extrabold md:text-4xl">{title}</h1>

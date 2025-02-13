@@ -1,18 +1,26 @@
 "use client";
 
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+
+import { useMemo } from "react";
 import { object, string } from "yup";
-import { MdClose } from "react-icons/md";
 import { Formik, Form } from "formik";
+import { toast } from "react-toastify";
+import { MdClose } from "react-icons/md";
 import { block } from "saitamadotfun/bunshi";
 import { Dialog, DialogPanel, DialogBackdrop } from "@headlessui/react";
 
+import { useFirebase } from "@/providers/FirebaseProvider";
 import { useGlobalState } from "@/providers/GlobalStateProvider";
 
 import Input from "../Input";
 
 export default block(
   function ContactDialog({ title }) {
+    const { app } = useFirebase();
     const { showContactDialog, setShowContactDialog } = useGlobalState();
+
+    const firestore = useMemo(() => getFirestore(app), [app]);
 
     return (
       <Dialog
@@ -48,7 +56,19 @@ export default block(
                 phone: string().required(),
                 projectDescription: string().required(),
               })}
-              onSubmit={(values) => {}}
+              onSubmit={(values) => {
+                return addDoc(collection(firestore, "contacts"), {
+                  ...values,
+                })
+                  .then(() =>
+                    toast.success(
+                      "Form sumitted successfully. Our team will be in touch with you."
+                    )
+                  )
+                  .catch(() =>
+                    toast.error("Oops, an unexpected error occured, try again!")
+                  );
+              }}
             >
               {({ isSubmitting }) => (
                 <Form className="flex flex-col space-y-4">
@@ -78,9 +98,13 @@ export default block(
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn btn-primary !py-3 rounded"
+                    className="btn btn-primary !p-0 rounded"
                   >
-                    Submit
+                    {isSubmitting ? (
+                      <div className="my-2.5 size-6 border-3 border-black border-t-transparent rounded-full animate-spin" />
+                    ) : (
+                      <p className="p-3">Submit</p>
+                    )}
                   </button>
                 </Form>
               )}

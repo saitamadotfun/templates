@@ -2,6 +2,8 @@
 
 import GlobalStateProvider from "./GlobalStateProvider";
 
-export default function Provider({ children }: React.PropsWithChildren) {
+type Props = unknown;
+
+export default function Provider({ children }: React.PropsWithChildren<Props>) {
   return <GlobalStateProvider>{children}</GlobalStateProvider>;
 }

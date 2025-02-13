@@ -7,6 +7,7 @@ import HeroSection from "./components/home/HeroSection";
 import ContactDialog from "./components/home/ContactDialog";
 import ServiceSection from "./components/home/ServiceSection";
 import TestimonialSection from "./components/home/TestimonialSection";
+import FirebaseProvider from "./providers/FirebaseProvider";
 
 export const layers = [
   layer(

@@ -1,11 +1,13 @@
 import "uno.css";
 import "@unocss/reset/tailwind.css";
+import "react-toastify/ReactToastify.css";
 import { Api } from "saitamadotfun/sdk";
 
 import clsx from "clsx";
 import type { Metadata } from "next";
 import LocalFont from "next/font/local";
 import { Geist } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 
 import "./globals.css";
 import { saitamaBaseApiUrl, saitamaApiKey, siteId } from "@/config";
@@ -21,18 +23,18 @@ const helvetica = LocalFont({
   variable: "--font-helvetica",
 });
 
-// export async function generateMetadata(): Promise<Metadata | undefined> {
-//   const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
-//   const site = await api.site.retrieve(siteId).then(({ data }) => data);
-//   return {
-//     icons: [site.metadata?.settings?.favicon?.uri],
-//     openGraph: {
-//       images: [site.metadata?.settings?.socialPreview?.uri],
-//     },
-//     title: site.metadata?.title,
-//     description: site.metadata?.description,
-//   };
-// }
+export async function generateMetadata(): Promise<Metadata | undefined> {
+  const api = new Api(saitamaBaseApiUrl, saitamaApiKey);
+  const site = await api.site.retrieve(siteId).then(({ data }) => data);
+  return {
+    icons: [site.metadata?.settings?.favicon?.uri],
+    openGraph: {
+      images: [site.metadata?.settings?.socialPreview?.uri],
+    },
+    title: site.metadata?.title,
+    description: site.metadata?.description,
+  };
+}
 
 export default function RootLayout({
   children,
@@ -50,6 +52,10 @@ export default function RootLayout({
     >
       <body className="flex flex-col overflow-x-hidden">
         <Provider>{children}</Provider>
+        <ToastContainer
+          className="z-9999"
+          position="bottom-right"
+        />
       </body>
     </html>
   );

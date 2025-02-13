@@ -150,6 +150,17 @@
       "email": "contact@nexusbuilder.xyz"
     },
     "Config": {
+      "firebase": {
+        "config": {
+          "projectId": "nexusbuilder001",
+          "measurementId": "G-MK8CRZYL9Q",
+          "messagingSenderId": "598838394773",
+          "authDomain": "nexusbuilder001.firebaseapp.com",
+          "apiKey": "AIzaSyAhZFhzVa4pY_Ig2E1z9KcfXFCFnD5L9p4",
+          "appId": "1:598838394773:web:bb8d4344e7bb97a881c09c",
+          "storageBucket": "nexusbuilder001.firebasestorage.app"
+        }
+      },
       "theme": {
         "primary": {
           "default": "#5CA47A",

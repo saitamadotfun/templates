@@ -5,7 +5,10 @@ import { block } from "saitamadotfun/bunshi";
 export default block(
   function TestimonialSection({ testimonies }) {
     return (
-      <section className="grid grid-cols-4 gap-4 px-4 tablet:px-8">
+      <section
+        id="testimonies"
+        className="grid grid-cols-4 gap-4 px-4 z-10 tablet:px-8"
+      >
         {testimonies.map((testimony, index) => (
           <div
             key={index}
