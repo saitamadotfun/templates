@@ -10,8 +10,8 @@ import { Geist } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
 import "./globals.css";
-import { saitamaBaseApiUrl, saitamaApiKey, siteId } from "@/config";
 import Provider from "@/providers";
+import { saitamaBaseApiUrl, saitamaApiKey, siteId } from "@/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
